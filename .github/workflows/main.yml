@@ -1,4 +1,4 @@
-name: Create mediawiki environment using terraform
+name: POC mediawiki environment using terraform & ansible
 
 on:
   # Triggers the workflow on push or pull request events but only for the "main" branch
@@ -32,5 +32,6 @@ jobs:
     - name: Terraform ${{ inputs.action }}
       run: |
         cd terraform
-        terraform apply --auto-approve
-        terraform destroy --auto-approve
+        
+  #      terraform apply --auto-approve
+  #      terraform destroy --auto-approve
