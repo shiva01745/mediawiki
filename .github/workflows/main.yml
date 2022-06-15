@@ -32,6 +32,8 @@ jobs:
       run: |
        mkdir /opt/custom_workspace/project_mediawiki || true
        mkdir /opt/custom_workspace/project_mediawiki/terraform || true
+       cp -rf key /opt/custom_workspace/project_mediawiki/
+       cp -rf ansible_playbook /opt/custom_workspace/project_mediawiki/
        cp terraform/*.tf /opt/custom_workspace/project_mediawiki/terraform
        ls -lthra /opt/custom_workspace/project_mediawiki/*
       
