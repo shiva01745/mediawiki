@@ -1,0 +1,31 @@
+name: Deploy new code on mediaserver
+
+on:
+  # Triggers the workflow on push or pull request events but only for the "main" branch
+ # push:
+ #   branches: [ "main" ]
+ # pull_request:
+ #   branches: [ "main" ]
+
+  workflow_dispatch:
+    inputs:
+      url:
+        description: 'Enter the mediawiki tar url'
+        default: 'https://releases.wikimedia.org/mediawiki/1.38/mediawiki-1.38.1.tar.gz'
+        required: false
+        type: string
+
+jobs:
+  build:
+    name: hosting application
+    runs-on: [self-hosted, linux, x64]
+    steps:
+
+    - name: Checkout Repo
+      uses: actions/checkout@v1
+      
+    - name: Deploy the code
+      run: |
+       cd cicd_ansible
+       ansible-playbook -u ec2-user --private-key ubuntu_key.pem -i inv cicd.yml --extra-vars "version=${{ inputs.terraform_action }}" -vv
+      
