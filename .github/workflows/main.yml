@@ -23,7 +23,8 @@ jobs:
 
     - name: Checkout Repo
       uses: actions/checkout@v1
-      
+
+      # already created "/opt/custom_workspace" on runner server
     - name: create a custom workspace
       run: |
        mkdir /opt/custom_workspace/project_mediawiki || true
