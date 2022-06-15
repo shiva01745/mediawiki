@@ -1,0 +1,64 @@
+
+---
+- hosts: all
+  become: yes
+  become_method: sudo
+  gather_facts: no
+  #
+  tasks:
+  - name: Download mediawiki tar file
+    get_url:
+       url: "{{ version }}"
+       dest: /tmp
+
+  - name: Remove directory
+    file:
+       path: /opt/code
+       state: absent
+
+  - name: create code directory
+    file:
+      dest: /opt/code
+      state: directory
+
+  - name: Find download mediawiki package
+    find: 
+      paths: /tmp 
+      patterns: "mediawiki-*.tar.gz"
+    register: find_result
+
+
+
+  - name: untar the mediawiki code
+    unarchive:
+       src: "{{ item.path }}"
+       dest: /opt/code
+       remote_src: yes
+    with_items: "{{ find_result.files }}"
+
+  - name: Remove previous code mediawiki symlink
+    file:
+      path: "/var/www/mediawiki"
+      state: absent
+
+  - name: Create symbolic link 
+    shell: |
+       cd /var/www/
+       ln -s /opt/code/mediawiki-*/ mediawiki
+
+  - name: Change ownership
+    shell: chown -v -R apache:apache /var/www/mediawiki
+    register: chown
+  - debug:
+      var: chown.stdout_lines
+
+  - name: restart httpd service
+    shell: service httpd restart
+
+
+
+
+
+
+
+
