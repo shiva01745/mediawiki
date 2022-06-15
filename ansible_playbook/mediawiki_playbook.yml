@@ -30,7 +30,7 @@
        mysql -u root -e "GRANT ALL PRIVILEGES ON wikidatabase.* TO 'wiki'@'localhost';"
        mysql -u root -e "FLUSH PRIVILEGES;"
        mysql -u root -e "show databases;"
-    ignore: true
+    ignore_errors: yes
     register: db
   - debug: var=db.stdout_lines
 
