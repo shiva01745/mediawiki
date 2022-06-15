@@ -10,7 +10,7 @@ on:
     inputs:
       action:
         description: 'terraform action: apply or destroy'
-        default: 'plan'
+        default: 'destroy'
         required: false
         type: string
 
