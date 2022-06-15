@@ -104,6 +104,7 @@ resource "null_resource" "example1" {
         sleep 30;
         echo [web] > inv;
         echo ${aws_instance.mediawiki.public_dns} >> inv;
+        export ANSIBLE_HOST_KEY_CHECKING=False;
         ansible-playbook -u ec2-user --private-key ../key/ubuntu_key.pem -i inv ../ansible_playbook/mediawiki_playbook.yml
     EOF
   }
