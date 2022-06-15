@@ -27,18 +27,19 @@ jobs:
     - name: create a custom workspace
       run: |
        mkdir /opt/custom_workspace/project_mediawiki
-       cp terraform/*.tf
+       cp terraform/*.tf /opt/custom_workspace/project_mediawiki
        ls -lthra /opt/custom_workspace/project_mediawiki/*
       
     - name: Terraform validate
       run: |
-        cd terraform
+        cd /opt/custom_workspace/project_mediawiki
         terraform init
         terraform validate
         
     - name: Terraform ${{ inputs.action }}
       run: |
-        cd terraform
+        cd /opt/custom_workspace/project_mediawiki
+        ls -lthra 
         
   #      terraform apply --auto-approve
   #      terraform destroy --auto-approve
