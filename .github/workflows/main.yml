@@ -9,11 +9,14 @@ on:
 
   workflow_dispatch:
     inputs:
-      action:
-        description: 'terraform action: apply or destroy'
-        default: 'destroy'
-        required: false
-        type: string
+      terraform_action:
+        description: 'terraform action: apply or destroy'     
+        required: true
+        default: 'destroy' 
+        type: choice
+        options:
+        - apply
+        - destroy
 
 jobs:
   build:
@@ -28,7 +31,8 @@ jobs:
     - name: create a custom workspace
       run: |
        mkdir /opt/custom_workspace/project_mediawiki || true
-       cp terraform/*.tf /opt/custom_workspace/project_mediawiki
+       mkdir /opt/custom_workspace/project_mediawiki/terraform || true
+       cp terraform/*.tf /opt/custom_workspace/project_mediawiki/terraform
        ls -lthra /opt/custom_workspace/project_mediawiki/*
       
     - name: Terraform validate
@@ -37,9 +41,9 @@ jobs:
         terraform init
         terraform validate
         
-    - name: Terraform ${{ inputs.action }}
+    - name: Terraform ${{ inputs.terraform_action }}
       run: |
-        cd /opt/custom_workspace/project_mediawiki
+        cd /opt/custom_workspace/project_mediawiki/terraform
         ls -lthra 
-        terraform ${{ inputs.action }} --auto-approve
+        terraform ${{ inputs.terraform_action }} --auto-approve
   
