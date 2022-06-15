@@ -1,0 +1,14 @@
+name: Create mediawiki environment using terraform
+
+on:
+  # Triggers the workflow on push or pull request events but only for the "main" branch
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    name: hosting application
+    runs-on: [self-hosted, linux, x64]
+    steps:
