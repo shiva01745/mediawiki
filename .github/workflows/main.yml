@@ -14,9 +14,6 @@ on:
         required: false
         type: string
 
-
-
-
 jobs:
   build:
     name: hosting application
@@ -35,4 +32,4 @@ jobs:
     - name: Terraform ${{ inputs.action }}
       run: |
         cd terraform
-        terraform ${{ inputs.action }} --auto-approve
+        terraform destroy --auto-approve
