@@ -37,7 +37,7 @@ jobs:
       
     - name: Terraform validate
       run: |
-        cd /opt/custom_workspace/project_mediawiki
+        cd /opt/custom_workspace/project_mediawiki/terraform
         terraform init
         terraform validate
         
