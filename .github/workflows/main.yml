@@ -26,7 +26,7 @@ jobs:
       
     - name: create a custom workspace
       run: |
-       mkdir /opt/custom_workspace/project_mediawiki
+       mkdir /opt/custom_workspace/project_mediawiki || true
        cp terraform/*.tf /opt/custom_workspace/project_mediawiki
        ls -lthra /opt/custom_workspace/project_mediawiki/*
       
