@@ -24,11 +24,17 @@ jobs:
     - name: Checkout Repo
       uses: actions/checkout@v1
       
+    - name: create a custom workspace
+      run: |
+       mkdir /opt/custom_workspace/project_mediawiki
+       cp terraform/*.tf
+       ls -lthra /opt/custom_workspace/project_mediawiki/*
+      
     - name: Terraform validate
       run: |
         cd terraform
         terraform init
-        terraform ${{ inputs.action }}
+        terraform validate
         
     - name: Terraform ${{ inputs.action }}
       run: |
