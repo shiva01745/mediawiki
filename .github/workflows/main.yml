@@ -16,10 +16,13 @@ jobs:
     - name: Checkout Repo
       uses: actions/checkout@v1
       
-    - name: testing 
+    - name: Terraform validate
       run: |
-        whoami
         cd terraform
-        ls -lthra 
-      
-
+        terraform init
+        terraform validate
+        
+    - name: Terraform apply
+      run: |
+        cd terraform
+        terraform apply --auto-approve
