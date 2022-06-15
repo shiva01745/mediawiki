@@ -26,6 +26,7 @@ jobs:
       
     - name: Deploy the code
       run: |
-       cd cicd_ansible
-       ansible-playbook -u ec2-user --private-key ubuntu_key.pem -i inv cicd.yml --extra-vars "version=${{ inputs.terraform_action }}" -vv
+       ls -ltra 
+  #     cd cicd_ansible
+  #     ansible-playbook -u ec2-user --private-key ubuntu_key.pem -i inv cicd.yml --extra-vars "version=${{ inputs.terraform_action }}" -vv
       
