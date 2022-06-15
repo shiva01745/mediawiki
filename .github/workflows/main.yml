@@ -2,10 +2,10 @@ name: POC mediawiki environment using terraform & ansible
 
 on:
   # Triggers the workflow on push or pull request events but only for the "main" branch
-  push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+ # push:
+ #   branches: [ "main" ]
+ # pull_request:
+ #   branches: [ "main" ]
 
   workflow_dispatch:
     inputs:
@@ -28,7 +28,7 @@ jobs:
       run: |
         cd terraform
         terraform init
-        terraform validate
+        terraform ${{ inputs.action }}
         
     - name: Terraform ${{ inputs.action }}
       run: |
