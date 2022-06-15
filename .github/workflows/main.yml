@@ -40,6 +40,5 @@ jobs:
       run: |
         cd /opt/custom_workspace/project_mediawiki
         ls -lthra 
-        
-  #      terraform apply --auto-approve
-  #      terraform destroy --auto-approve
+        terraform ${{ inputs.action }} --auto-approve
+  
