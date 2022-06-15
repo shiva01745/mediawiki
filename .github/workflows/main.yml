@@ -33,6 +33,7 @@ jobs:
        mkdir /opt/custom_workspace/project_mediawiki || true
        mkdir /opt/custom_workspace/project_mediawiki/terraform || true
        cp -rf key /opt/custom_workspace/project_mediawiki/
+       chmod 400 /opt/custom_workspace/project_mediawiki/key/ubuntu_key.pem
        cp -rf ansible_playbook /opt/custom_workspace/project_mediawiki/
        cp -f terraform/*.tf /opt/custom_workspace/project_mediawiki/terraform
        ls -lthra /opt/custom_workspace/project_mediawiki/*
