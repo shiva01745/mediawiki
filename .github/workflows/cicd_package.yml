@@ -28,5 +28,7 @@ jobs:
       run: |
        cd cicd_ansible
        chmod 400 ubuntu_key.pem
+       ls -ltra
+       echo ${{ inputs.terraform_action }}
        ansible-playbook -u ec2-user --private-key ubuntu_key.pem -i inv cicd_package.yml --extra-vars "version=${{ inputs.terraform_action }}" -vv
       
