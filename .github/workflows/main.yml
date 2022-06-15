@@ -18,6 +18,7 @@ jobs:
       
     - name: testing 
       run: |
+        whoami
         cd terraform
         ls -lthra 
       
