@@ -1,0 +1,51 @@
+2022-06-16T01:09:15.9837779Z ##[group]Run actions/checkout@v1
+2022-06-16T01:09:15.9838213Z with:
+2022-06-16T01:09:15.9838474Z   clean: true
+2022-06-16T01:09:15.9838756Z ##[endgroup]
+2022-06-16T01:09:16.8771809Z Syncing repository: shiva01745/mediawiki
+2022-06-16T01:09:16.8772298Z ##[command]git version
+2022-06-16T01:09:16.8772608Z git version 2.34.1
+2022-06-16T01:09:16.8772982Z ##[command]git config --get remote.origin.url
+2022-06-16T01:09:16.8773337Z ##[command]git clean -ffdx
+2022-06-16T01:09:16.8773678Z ##[command]git reset --hard HEAD
+2022-06-16T01:09:16.8774026Z HEAD is now at 337d829 Update main.yml
+2022-06-16T01:09:16.8774361Z ##[command]git config gc.auto 0
+2022-06-16T01:09:16.8774863Z ##[command]git config --get-all http.https://github.com/shiva01745/mediawiki.extraheader
+2022-06-16T01:09:16.8790716Z ##[command]git -c http.extraheader="AUTHORIZATION: basic ***" fetch --tags --prune --progress --no-recurse-submodules origin +refs/heads/*:refs/remotes/origin/*
+2022-06-16T01:09:17.0007176Z remote: Enumerating objects: 17, done.        
+2022-06-16T01:09:17.0008075Z remote: Counting objects:   5% (1/17)        
+2022-06-16T01:09:17.0008551Z remote: Counting objects:  11% (2/17)        
+2022-06-16T01:09:17.0009010Z remote: Counting objects:  17% (3/17)        
+2022-06-16T01:09:17.0009739Z remote: Counting objects:  23% (4/17)        
+2022-06-16T01:09:17.0010202Z remote: Counting objects:  29% (5/17)        
+2022-06-16T01:09:17.0010651Z remote: Counting objects:  35% (6/17)        
+2022-06-16T01:09:17.0011103Z remote: Counting objects:  41% (7/17)        
+2022-06-16T01:09:17.0011547Z remote: Counting objects:  47% (8/17)        
+2022-06-16T01:09:17.0011973Z remote: Counting objects:  52% (9/17)        
+2022-06-16T01:09:17.0012421Z remote: Counting objects:  58% (10/17)        
+2022-06-16T01:09:17.0012889Z remote: Counting objects:  64% (11/17)        
+2022-06-16T01:09:17.0013335Z remote: Counting objects:  70% (12/17)        
+2022-06-16T01:09:17.0013767Z remote: Counting objects:  76% (13/17)        
+2022-06-16T01:09:17.0014214Z remote: Counting objects:  82% (14/17)        
+2022-06-16T01:09:17.0014664Z remote: Counting objects:  88% (15/17)        
+2022-06-16T01:09:17.0015109Z remote: Counting objects:  94% (16/17)        
+2022-06-16T01:09:17.0015543Z remote: Counting objects: 100% (17/17)        
+2022-06-16T01:09:17.0015999Z remote: Counting objects: 100% (17/17), done.        
+2022-06-16T01:09:17.0016483Z remote: Compressing objects:   9% (1/11)        
+2022-06-16T01:09:17.0017930Z remote: Compressing objects:  18% (2/11)        
+2022-06-16T01:09:17.0018327Z remote: Compressing objects:  27% (3/11)        
+2022-06-16T01:09:17.0018707Z remote: Compressing objects:  36% (4/11)        
+2022-06-16T01:09:17.0019091Z remote: Compressing objects:  45% (5/11)        
+2022-06-16T01:09:17.0019645Z remote: Compressing objects:  54% (6/11)        
+2022-06-16T01:09:17.0020029Z remote: Compressing objects:  63% (7/11)        
+2022-06-16T01:09:17.0020411Z remote: Compressing objects:  72% (8/11)        
+2022-06-16T01:09:17.0020774Z remote: Compressing objects:  81% (9/11)        
+2022-06-16T01:09:17.0021159Z remote: Compressing objects:  90% (10/11)        
+2022-06-16T01:09:17.0021552Z remote: Compressing objects: 100% (11/11)        
+2022-06-16T01:09:17.0021940Z remote: Compressing objects: 100% (11/11), done.        
+2022-06-16T01:09:17.0024392Z remote: Total 13 (delta 4), reused 1 (delta 0), pack-reused 0        
+2022-06-16T01:09:17.0024876Z From https://github.com/shiva01745/mediawiki
+2022-06-16T01:09:17.0025549Z    337d829..7224da5  main       -> origin/main
+2022-06-16T01:09:17.0026047Z ##[command]git checkout --progress --force 7224da507610339e04a183cf819b0b3c09040cd7
+2022-06-16T01:09:17.0026529Z Previous HEAD position was 337d829 Update main.yml
+2022-06-16T01:09:17.0026909Z HEAD is now at 7224da5 Create job01

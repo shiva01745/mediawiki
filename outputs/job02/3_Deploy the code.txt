@@ -1,0 +1,89 @@
+2022-06-16T01:09:17.0433070Z ##[group]Run cd cicd_ansible
+2022-06-16T01:09:17.0433705Z [36;1mcd cicd_ansible[0m
+2022-06-16T01:09:17.0434034Z [36;1mchmod 400 ubuntu_key.pem[0m
+2022-06-16T01:09:17.0434324Z [36;1mls -ltra[0m
+2022-06-16T01:09:17.0434761Z [36;1mecho https://releases.wikimedia.org/mediawiki/1.38/mediawiki-1.38.1.tar.gz[0m
+2022-06-16T01:09:17.0435680Z [36;1mansible-playbook -u ec2-user --private-key ubuntu_key.pem -i inv cicd_package.yml --extra-vars "version=https://releases.wikimedia.org/mediawiki/1.38/mediawiki-1.38.1.tar.gz" -vv[0m
+2022-06-16T01:09:17.0465126Z shell: /usr/bin/bash -e {0}
+2022-06-16T01:09:17.0465483Z ##[endgroup]
+2022-06-16T01:09:17.0751923Z total 20
+2022-06-16T01:09:17.0753046Z -rw-rw-r-- 1 ubuntu ubuntu 1187 Jun 16 00:46 cicd_package.yml
+2022-06-16T01:09:17.0786019Z drwxrwxr-x 9 ubuntu ubuntu 4096 Jun 16 00:50 ..
+2022-06-16T01:09:17.0786581Z -r-------- 1 ubuntu ubuntu 1675 Jun 16 01:09 ubuntu_key.pem
+2022-06-16T01:09:17.0787052Z -rw-rw-r-- 1 ubuntu ubuntu  105 Jun 16 01:09 inv
+2022-06-16T01:09:17.0787597Z drwxrwxr-x 2 ubuntu ubuntu 4096 Jun 16 01:09 .
+2022-06-16T01:09:17.0788271Z https://releases.wikimedia.org/mediawiki/1.38/mediawiki-1.38.1.tar.gz
+2022-06-16T01:09:17.4778910Z ansible-playbook 2.10.8
+2022-06-16T01:09:17.4779727Z   config file = None
+2022-06-16T01:09:17.4780718Z   configured module search path = ['/home/ubuntu/.ansible/plugins/modules', '/usr/share/ansible/plugins/modules']
+2022-06-16T01:09:17.4781740Z   ansible python module location = /usr/lib/python3/dist-packages/ansible
+2022-06-16T01:09:17.4848112Z   executable location = /usr/bin/ansible-playbook
+2022-06-16T01:09:17.4848603Z   python version = 3.10.4 (main, Apr  2 2022, 09:04:19) [GCC 11.2.0]
+2022-06-16T01:09:17.4848979Z No config file found; using defaults
+2022-06-16T01:09:17.6559792Z Skipping callback 'default', as we already have a stdout callback.
+2022-06-16T01:09:17.6564998Z Skipping callback 'minimal', as we already have a stdout callback.
+2022-06-16T01:09:17.6570007Z Skipping callback 'oneline', as we already have a stdout callback.
+2022-06-16T01:09:17.6574475Z 
+2022-06-16T01:09:17.6574924Z PLAYBOOK: cicd_package.yml *****************************************************
+2022-06-16T01:09:17.6580511Z 1 plays in cicd_package.yml
+2022-06-16T01:09:17.6603169Z 
+2022-06-16T01:09:17.6603696Z PLAY [all] *********************************************************************
+2022-06-16T01:09:17.6698638Z META: ran handlers
+2022-06-16T01:09:17.6729971Z 
+2022-06-16T01:09:17.6730474Z TASK [Download mediawiki tar file from url] ************************************
+2022-06-16T01:09:17.6736640Z task path: /opt/runner/actions-runner/workspace/mediawiki/mediawiki/cicd_ansible/cicd_package.yml:9
+2022-06-16T01:09:21.4506277Z ok: [ec2-35-171-26-240.compute-1.amazonaws.com] => {"changed": false, "checksum_dest": "a292ce199237b08baf9850ba332bddb3cd04e52e", "checksum_src": "a292ce199237b08baf9850ba332bddb3cd04e52e", "dest": "/tmp/mediawiki-1.38.1.tar.gz", "elapsed": 2, "gid": 0, "group": "root", "md5sum": "8d41f4636ead0ad0dfd09a1140f61732", "mode": "0644", "msg": "OK (54877814 bytes)", "owner": "root", "secontext": "unconfined_u:object_r:user_home_t:s0", "size": 54877814, "src": "/home/ec2-user/.ansible/tmp/ansible-tmp-1655341757.9734116-5441-240705729883114/tmp_cya8lal", "state": "file", "status_code": 200, "uid": 0, "url": "https://releases.wikimedia.org/mediawiki/1.38/mediawiki-1.38.1.tar.gz"}
+2022-06-16T01:09:21.4557433Z 
+2022-06-16T01:09:21.4558085Z TASK [Remove the code directory incase previous code might exist] **************
+2022-06-16T01:09:21.4603842Z task path: /opt/runner/actions-runner/workspace/mediawiki/mediawiki/cicd_ansible/cicd_package.yml:14
+2022-06-16T01:09:23.7724147Z changed: [ec2-35-171-26-240.compute-1.amazonaws.com] => {"changed": true, "path": "/opt/code", "state": "absent"}
+2022-06-16T01:09:23.7771182Z 
+2022-06-16T01:09:23.7771847Z TASK [Create new code directory] ***********************************************
+2022-06-16T01:09:23.7778248Z task path: /opt/runner/actions-runner/workspace/mediawiki/mediawiki/cicd_ansible/cicd_package.yml:19
+2022-06-16T01:09:24.1984340Z changed: [ec2-35-171-26-240.compute-1.amazonaws.com] => {"changed": true, "gid": 0, "group": "root", "mode": "0755", "owner": "root", "path": "/opt/code", "secontext": "unconfined_u:object_r:usr_t:s0", "size": 6, "state": "directory", "uid": 0}
+2022-06-16T01:09:24.2075129Z 
+2022-06-16T01:09:24.2075844Z TASK [Find downloaded mediawiki package] ***************************************
+2022-06-16T01:09:24.2082379Z task path: /opt/runner/actions-runner/workspace/mediawiki/mediawiki/cicd_ansible/cicd_package.yml:24
+2022-06-16T01:09:24.7375877Z ok: [ec2-35-171-26-240.compute-1.amazonaws.com] => {"changed": false, "examined": 15, "files": [{"atime": 1655341473.8680823, "ctime": 1655341473.8670824, "dev": 51714, "gid": 0, "gr_name": "root", "inode": 355380, "isblk": false, "ischr": false, "isdir": false, "isfifo": false, "isgid": false, "islnk": false, "isreg": true, "issock": false, "isuid": false, "mode": "0644", "mtime": 1655341473.779083, "nlink": 1, "path": "/tmp/mediawiki-1.38.1.tar.gz", "pw_name": "root", "rgrp": true, "roth": true, "rusr": true, "size": 54877814, "uid": 0, "wgrp": false, "woth": false, "wusr": true, "xgrp": false, "xoth": false, "xusr": false}], "matched": 1, "msg": ""}
+2022-06-16T01:09:24.7419504Z 
+2022-06-16T01:09:24.7420127Z TASK [Untar the downloaded mediawiki code] *************************************
+2022-06-16T01:09:24.7447756Z task path: /opt/runner/actions-runner/workspace/mediawiki/mediawiki/cicd_ansible/cicd_package.yml:30
+2022-06-16T01:09:48.4426966Z changed: [ec2-35-171-26-240.compute-1.amazonaws.com] => (item={'path': '/tmp/mediawiki-1.38.1.tar.gz', 'mode': '0644', 'isdir': False, 'ischr': False, 'isblk': False, 'isreg': True, 'isfifo': False, 'islnk': False, 'issock': False, 'uid': 0, 'gid': 0, 'size': 54877814, 'inode': 355380, 'dev': 51714, 'nlink': 1, 'atime': 1655341473.8680823, 'mtime': 1655341473.779083, 'ctime': 1655341473.8670824, 'gr_name': 'root', 'pw_name': 'root', 'wusr': True, 'rusr': True, 'xusr': False, 'wgrp': False, 'rgrp': True, 'xgrp': False, 'woth': False, 'roth': True, 'xoth': False, 'isuid': False, 'isgid': False}) => {"ansible_loop_var": "item", "changed": true, "dest": "/opt/code", "extract_results": {"cmd": ["/bin/gtar", "--extract", "-C", "/opt/code", "-z", "-f", "/tmp/mediawiki-1.38.1.tar.gz"], "err": "", "out": "", "rc": 0}, "gid": 0, "group": "root", "handler": "TgzArchive", "item": {"atime": 1655341473.8680823, "ctime": 1655341473.8670824, "dev": 51714, "gid": 0, "gr_name": "root", "inode": 355380, "isblk": false, "ischr": false, "isdir": false, "isfifo": false, "isgid": false, "islnk": false, "isreg": true, "issock": false, "isuid": false, "mode": "0644", "mtime": 1655341473.779083, "nlink": 1, "path": "/tmp/mediawiki-1.38.1.tar.gz", "pw_name": "root", "rgrp": true, "roth": true, "rusr": true, "size": 54877814, "uid": 0, "wgrp": false, "woth": false, "wusr": true, "xgrp": false, "xoth": false, "xusr": false}, "mode": "0755", "owner": "root", "secontext": "unconfined_u:object_r:usr_t:s0", "size": 30, "src": "/tmp/mediawiki-1.38.1.tar.gz", "state": "directory", "uid": 0}
+2022-06-16T01:09:48.4430063Z 
+2022-06-16T01:09:48.4430378Z TASK [Remove previous code mediawiki symlink] **********************************
+2022-06-16T01:09:48.4431194Z task path: /opt/runner/actions-runner/workspace/mediawiki/mediawiki/cicd_ansible/cicd_package.yml:37
+2022-06-16T01:09:48.8624146Z changed: [ec2-35-171-26-240.compute-1.amazonaws.com] => {"changed": true, "path": "/var/www/mediawiki", "state": "absent"}
+2022-06-16T01:09:48.8644524Z 
+2022-06-16T01:09:48.8645019Z TASK [Create new code symbolic link] *******************************************
+2022-06-16T01:09:48.8663782Z task path: /opt/runner/actions-runner/workspace/mediawiki/mediawiki/cicd_ansible/cicd_package.yml:42
+2022-06-16T01:09:49.3744683Z changed: [ec2-35-171-26-240.compute-1.amazonaws.com] => {"changed": true, "cmd": "cd /var/www/\nln -s /opt/code/mediawiki-*/ mediawiki\n", "delta": "0:00:00.003866", "end": "2022-06-16 01:09:49.328193", "rc": 0, "start": "2022-06-16 01:09:49.324327", "stderr": "", "stderr_lines": [], "stdout": "", "stdout_lines": []}
+2022-06-16T01:09:49.3776906Z 
+2022-06-16T01:09:49.3777324Z TASK [Change ownership of the new code] ****************************************
+2022-06-16T01:09:49.3800846Z task path: /opt/runner/actions-runner/workspace/mediawiki/mediawiki/cicd_ansible/cicd_package.yml:47
+2022-06-16T01:09:49.7588453Z [WARNING]: Consider using the file module with owner rather than running
+2022-06-16T01:09:49.7589985Z 'chown'.  If you need to use command because file is insufficient you can add
+2022-06-16T01:09:49.7590734Z 'warn: false' to this command task or set 'command_warnings=False' in
+2022-06-16T01:09:49.7591195Z ansible.cfg to get rid of this message.
+2022-06-16T01:09:49.7595083Z changed: [ec2-35-171-26-240.compute-1.amazonaws.com] => {"changed": true, "cmd": "chown -v -R apache:apache /var/www/mediawiki", "delta": "0:00:00.005714", "end": "2022-06-16 01:09:49.712713", "rc": 0, "start": "2022-06-16 01:09:49.706999", "stderr": "", "stderr_lines": [], "stdout": "changed ownership of '/var/www/mediawiki' from root:root to apache:apache", "stdout_lines": ["changed ownership of '/var/www/mediawiki' from root:root to apache:apache"]}
+2022-06-16T01:09:49.7645868Z 
+2022-06-16T01:09:49.7646227Z TASK [debug] *******************************************************************
+2022-06-16T01:09:49.7648690Z task path: /opt/runner/actions-runner/workspace/mediawiki/mediawiki/cicd_ansible/cicd_package.yml:50
+2022-06-16T01:09:49.7973576Z ok: [ec2-35-171-26-240.compute-1.amazonaws.com] => {
+2022-06-16T01:09:49.8045628Z     "chown.stdout_lines": [
+2022-06-16T01:09:49.8046341Z         "changed ownership of '/var/www/mediawiki' from root:root to apache:apache"
+2022-06-16T01:09:49.8046685Z     ]
+2022-06-16T01:09:49.8046885Z }
+2022-06-16T01:09:49.8047024Z 
+2022-06-16T01:09:49.8047206Z TASK [Restart httpd service] ***************************************************
+2022-06-16T01:09:49.8047789Z task path: /opt/runner/actions-runner/workspace/mediawiki/mediawiki/cicd_ansible/cicd_package.yml:53
+2022-06-16T01:09:51.4439691Z [WARNING]: Consider using the service module rather than running 'service'.  If
+2022-06-16T01:09:51.4441000Z changed: [ec2-35-171-26-240.compute-1.amazonaws.com] => {"changed": true, "cmd": "service httpd restart", "delta": "0:00:01.248206", "end": "2022-06-16 01:09:51.380146", "rc": 0, "start": "2022-06-16 01:09:50.131940", "stderr": "Redirecting to /bin/systemctl restart httpd.service", "stderr_lines": ["Redirecting to /bin/systemctl restart httpd.service"], "stdout": "", "stdout_lines": []}
+2022-06-16T01:09:51.4442613Z you need to use command because service is insufficient you can add 'warn:
+2022-06-16T01:09:51.4484686Z false' to this command task or set 'command_warnings=False' in ansible.cfg to
+2022-06-16T01:09:51.4485077Z META: ran handlers
+2022-06-16T01:09:51.4485600Z get rid of this message.
+2022-06-16T01:09:51.4554734Z META: ran handlers
+2022-06-16T01:09:51.4572158Z 
+2022-06-16T01:09:51.4572600Z PLAY RECAP *********************************************************************
+2022-06-16T01:09:51.4573750Z ec2-35-171-26-240.compute-1.amazonaws.com : ok=10   changed=7    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-06-16T01:09:51.4574213Z 
