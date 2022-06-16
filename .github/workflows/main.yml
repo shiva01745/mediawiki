@@ -31,7 +31,7 @@ jobs:
       run: |
        sudo mkdir -p /opt/custom_workspace/project_mediawiki || true
        sudo chown -R ubuntu:ubuntu /opt/custom_workspace/
-       sudo mkdir /opt/custom_workspace/project_mediawiki/terraform || true
+        mkdir /opt/custom_workspace/project_mediawiki/terraform || true
        cp -rf key /opt/custom_workspace/project_mediawiki/
        chmod 400 /opt/custom_workspace/project_mediawiki/key/ubuntu_key.pem
        cp -rf ansible_playbook /opt/custom_workspace/project_mediawiki/
