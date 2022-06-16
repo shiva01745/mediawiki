@@ -52,11 +52,3 @@
 
   - name: Restart httpd service
     shell: service httpd restart
-
-
-
-
-
-
-
-
