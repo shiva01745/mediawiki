@@ -1,0 +1,1099 @@
+2022-06-16T00:58:01.6471652Z ##[group]Run cd /opt/custom_workspace/project_mediawiki/terraform
+2022-06-16T00:58:01.6472197Z [36;1mcd /opt/custom_workspace/project_mediawiki/terraform[0m
+2022-06-16T00:58:01.6472587Z [36;1mls -lthra [0m
+2022-06-16T00:58:01.6472872Z [36;1mterraform apply --auto-approve[0m
+2022-06-16T00:58:01.6621674Z shell: /usr/bin/bash -e {0}
+2022-06-16T00:58:01.6622027Z ##[endgroup]
+2022-06-16T00:58:01.6937342Z total 24K
+2022-06-16T00:58:01.6938574Z drwxr-xr-x 5 ubuntu ubuntu 4.0K Jun 16 00:54 ..
+2022-06-16T00:58:01.6939221Z drwxr-xr-x 3 ubuntu ubuntu 4.0K Jun 16 00:54 .terraform
+2022-06-16T00:58:01.6939819Z -rw-r--r-- 1 ubuntu ubuntu 2.2K Jun 16 00:55 .terraform.lock.hcl
+2022-06-16T00:58:01.6940349Z drwxrwxr-x 3 ubuntu ubuntu 4.0K Jun 16 00:55 .
+2022-06-16T00:58:01.6940957Z -rw-rw-r-- 1 ubuntu ubuntu  525 Jun 16 00:57 outputs.tf
+2022-06-16T00:58:01.6941549Z -rw-rw-r-- 1 ubuntu ubuntu 2.4K Jun 16 00:57 mediawiki.tf
+2022-06-16T00:58:05.6612649Z [0m[1mdata.aws_vpc.default: Reading...[0m[0m
+2022-06-16T00:58:05.9861393Z [0m[1mdata.aws_vpc.default: Read complete after 0s [id=vpc-0d2f1384a7024abd3][0m
+2022-06-16T00:58:05.9913054Z [0m[1mdata.aws_subnet.default: Reading...[0m[0m
+2022-06-16T00:58:06.1138227Z [0m[1mdata.aws_subnet.default: Read complete after 0s [id=subnet-02125c8c3aa17229a][0m
+2022-06-16T00:58:06.1369631Z 
+2022-06-16T00:58:06.1370668Z Terraform used the selected providers to generate the following execution
+2022-06-16T00:58:06.1373371Z plan. Resource actions are indicated with the following symbols:
+2022-06-16T00:58:06.1374166Z   [32m+[0m create
+2022-06-16T00:58:06.1381509Z [0m
+2022-06-16T00:58:06.1381955Z Terraform will perform the following actions:
+2022-06-16T00:58:06.1382584Z 
+2022-06-16T00:58:06.1462478Z [1m  # aws_instance.mediawiki[0m will be created[0m[0m
+2022-06-16T00:58:06.1463674Z [0m  [32m+[0m[0m resource "aws_instance" "mediawiki" {
+2022-06-16T00:58:06.1464492Z       [32m+[0m [0m[1m[0mami[0m[0m                                  = "ami-0b0af3577fe5e3532"
+2022-06-16T00:58:06.1465323Z       [32m+[0m [0m[1m[0marn[0m[0m                                  = (known after apply)
+2022-06-16T00:58:06.1466075Z       [32m+[0m [0m[1m[0massociate_public_ip_address[0m[0m          = (known after apply)
+2022-06-16T00:58:06.1521691Z       [32m+[0m [0m[1m[0mavailability_zone[0m[0m                    = (known after apply)
+2022-06-16T00:58:06.1522246Z       [32m+[0m [0m[1m[0mcpu_core_count[0m[0m                       = (known after apply)
+2022-06-16T00:58:06.1522742Z       [32m+[0m [0m[1m[0mcpu_threads_per_core[0m[0m                 = (known after apply)
+2022-06-16T00:58:06.1523229Z       [32m+[0m [0m[1m[0mdisable_api_termination[0m[0m              = (known after apply)
+2022-06-16T00:58:06.1523721Z       [32m+[0m [0m[1m[0mebs_optimized[0m[0m                        = (known after apply)
+2022-06-16T00:58:06.1524583Z       [32m+[0m [0m[1m[0mget_password_data[0m[0m                    = false
+2022-06-16T00:58:06.1525070Z       [32m+[0m [0m[1m[0mhost_id[0m[0m                              = (known after apply)
+2022-06-16T00:58:06.1525518Z       [32m+[0m [0m[1m[0mid[0m[0m                                   = (known after apply)
+2022-06-16T00:58:06.1525996Z       [32m+[0m [0m[1m[0minstance_initiated_shutdown_behavior[0m[0m = (known after apply)
+2022-06-16T00:58:06.1526494Z       [32m+[0m [0m[1m[0minstance_state[0m[0m                       = (known after apply)
+2022-06-16T00:58:06.1526948Z       [32m+[0m [0m[1m[0minstance_type[0m[0m                        = "t2.micro"
+2022-06-16T00:58:06.1527427Z       [32m+[0m [0m[1m[0mipv6_address_count[0m[0m                   = (known after apply)
+2022-06-16T00:58:06.1527905Z       [32m+[0m [0m[1m[0mipv6_addresses[0m[0m                       = (known after apply)
+2022-06-16T00:58:06.1528365Z       [32m+[0m [0m[1m[0mkey_name[0m[0m                             = "ubuntu_key"
+2022-06-16T00:58:06.1528818Z       [32m+[0m [0m[1m[0mmonitoring[0m[0m                           = (known after apply)
+2022-06-16T00:58:06.1529601Z       [32m+[0m [0m[1m[0moutpost_arn[0m[0m                          = (known after apply)
+2022-06-16T00:58:06.1530121Z       [32m+[0m [0m[1m[0mpassword_data[0m[0m                        = (known after apply)
+2022-06-16T00:58:06.1530612Z       [32m+[0m [0m[1m[0mplacement_group[0m[0m                      = (known after apply)
+2022-06-16T00:58:06.1531096Z       [32m+[0m [0m[1m[0mplacement_partition_number[0m[0m           = (known after apply)
+2022-06-16T00:58:06.1531594Z       [32m+[0m [0m[1m[0mprimary_network_interface_id[0m[0m         = (known after apply)
+2022-06-16T00:58:06.1532080Z       [32m+[0m [0m[1m[0mprivate_dns[0m[0m                          = (known after apply)
+2022-06-16T00:58:06.1532531Z       [32m+[0m [0m[1m[0mprivate_ip[0m[0m                           = (known after apply)
+2022-06-16T00:58:06.1533003Z       [32m+[0m [0m[1m[0mpublic_dns[0m[0m                           = (known after apply)
+2022-06-16T00:58:06.1533471Z       [32m+[0m [0m[1m[0mpublic_ip[0m[0m                            = (known after apply)
+2022-06-16T00:58:06.1533942Z       [32m+[0m [0m[1m[0msecondary_private_ips[0m[0m                = (known after apply)
+2022-06-16T00:58:06.1534409Z       [32m+[0m [0m[1m[0msecurity_groups[0m[0m                      = (known after apply)
+2022-06-16T00:58:06.1534979Z       [32m+[0m [0m[1m[0msource_dest_check[0m[0m                    = true
+2022-06-16T00:58:06.1535479Z       [32m+[0m [0m[1m[0msubnet_id[0m[0m                            = "subnet-02125c8c3aa17229a"
+2022-06-16T00:58:06.1535929Z       [32m+[0m [0m[1m[0mtags[0m[0m                                 = {
+2022-06-16T00:58:06.1536273Z           [32m+[0m [0m"Env"  = "POC"
+2022-06-16T00:58:06.1536637Z           [32m+[0m [0m"Name" = "mediawiki_server"
+2022-06-16T00:58:06.1536898Z         }
+2022-06-16T00:58:06.1537246Z       [32m+[0m [0m[1m[0mtags_all[0m[0m                             = {
+2022-06-16T00:58:06.1537602Z           [32m+[0m [0m"Env"  = "POC"
+2022-06-16T00:58:06.1537961Z           [32m+[0m [0m"Name" = "mediawiki_server"
+2022-06-16T00:58:06.1538207Z         }
+2022-06-16T00:58:06.1538607Z       [32m+[0m [0m[1m[0mtenancy[0m[0m                              = (known after apply)
+2022-06-16T00:58:06.1539075Z       [32m+[0m [0m[1m[0muser_data[0m[0m                            = (known after apply)
+2022-06-16T00:58:06.1539534Z       [32m+[0m [0m[1m[0muser_data_base64[0m[0m                     = (known after apply)
+2022-06-16T00:58:06.1540019Z       [32m+[0m [0m[1m[0mvpc_security_group_ids[0m[0m               = (known after apply)
+2022-06-16T00:58:06.1540239Z 
+2022-06-16T00:58:06.1540482Z       [32m+[0m [0mcapacity_reservation_specification {
+2022-06-16T00:58:06.1540976Z           [32m+[0m [0m[1m[0mcapacity_reservation_preference[0m[0m = (known after apply)
+2022-06-16T00:58:06.1541215Z 
+2022-06-16T00:58:06.1541425Z           [32m+[0m [0mcapacity_reservation_target {
+2022-06-16T00:58:06.1541901Z               [32m+[0m [0m[1m[0mcapacity_reservation_id[0m[0m = (known after apply)
+2022-06-16T00:58:06.1542206Z             }
+2022-06-16T00:58:06.1556710Z         }
+2022-06-16T00:58:06.1556877Z 
+2022-06-16T00:58:06.1557126Z       [32m+[0m [0mebs_block_device {
+2022-06-16T00:58:06.1557584Z           [32m+[0m [0m[1m[0mdelete_on_termination[0m[0m = (known after apply)
+2022-06-16T00:58:06.1558064Z           [32m+[0m [0m[1m[0mdevice_name[0m[0m           = (known after apply)
+2022-06-16T00:58:06.1558510Z           [32m+[0m [0m[1m[0mencrypted[0m[0m             = (known after apply)
+2022-06-16T00:58:06.1558964Z           [32m+[0m [0m[1m[0miops[0m[0m                  = (known after apply)
+2022-06-16T00:58:06.1559411Z           [32m+[0m [0m[1m[0mkms_key_id[0m[0m            = (known after apply)
+2022-06-16T00:58:06.1559847Z           [32m+[0m [0m[1m[0msnapshot_id[0m[0m           = (known after apply)
+2022-06-16T00:58:06.1560486Z           [32m+[0m [0m[1m[0mtags[0m[0m                  = (known after apply)
+2022-06-16T00:58:06.1560967Z           [32m+[0m [0m[1m[0mthroughput[0m[0m            = (known after apply)
+2022-06-16T00:58:06.1561464Z           [32m+[0m [0m[1m[0mvolume_id[0m[0m             = (known after apply)
+2022-06-16T00:58:06.1561916Z           [32m+[0m [0m[1m[0mvolume_size[0m[0m           = (known after apply)
+2022-06-16T00:58:06.1562368Z           [32m+[0m [0m[1m[0mvolume_type[0m[0m           = (known after apply)
+2022-06-16T00:58:06.1562651Z         }
+2022-06-16T00:58:06.1562925Z 
+2022-06-16T00:58:06.1563164Z       [32m+[0m [0menclave_options {
+2022-06-16T00:58:06.1563606Z           [32m+[0m [0m[1m[0menabled[0m[0m = (known after apply)
+2022-06-16T00:58:06.1563883Z         }
+2022-06-16T00:58:06.1564021Z 
+2022-06-16T00:58:06.1564222Z       [32m+[0m [0mephemeral_block_device {
+2022-06-16T00:58:06.1564630Z           [32m+[0m [0m[1m[0mdevice_name[0m[0m  = (known after apply)
+2022-06-16T00:58:06.1565076Z           [32m+[0m [0m[1m[0mno_device[0m[0m    = (known after apply)
+2022-06-16T00:58:06.1565534Z           [32m+[0m [0m[1m[0mvirtual_name[0m[0m = (known after apply)
+2022-06-16T00:58:06.1565812Z         }
+2022-06-16T00:58:06.1565948Z 
+2022-06-16T00:58:06.1566232Z       [32m+[0m [0mmetadata_options {
+2022-06-16T00:58:06.1566684Z           [32m+[0m [0m[1m[0mhttp_endpoint[0m[0m               = (known after apply)
+2022-06-16T00:58:06.1567177Z           [32m+[0m [0m[1m[0mhttp_put_response_hop_limit[0m[0m = (known after apply)
+2022-06-16T00:58:06.1567660Z           [32m+[0m [0m[1m[0mhttp_tokens[0m[0m                 = (known after apply)
+2022-06-16T00:58:06.1568117Z           [32m+[0m [0m[1m[0minstance_metadata_tags[0m[0m      = (known after apply)
+2022-06-16T00:58:06.1568418Z         }
+2022-06-16T00:58:06.1568555Z 
+2022-06-16T00:58:06.1568742Z       [32m+[0m [0mnetwork_interface {
+2022-06-16T00:58:06.1569169Z           [32m+[0m [0m[1m[0mdelete_on_termination[0m[0m = (known after apply)
+2022-06-16T00:58:06.1569647Z           [32m+[0m [0m[1m[0mdevice_index[0m[0m          = (known after apply)
+2022-06-16T00:58:06.1570165Z           [32m+[0m [0m[1m[0mnetwork_interface_id[0m[0m  = (known after apply)
+2022-06-16T00:58:06.1570462Z         }
+2022-06-16T00:58:06.1570585Z 
+2022-06-16T00:58:06.1570767Z       [32m+[0m [0mroot_block_device {
+2022-06-16T00:58:06.1571194Z           [32m+[0m [0m[1m[0mdelete_on_termination[0m[0m = (known after apply)
+2022-06-16T00:58:06.1571657Z           [32m+[0m [0m[1m[0mdevice_name[0m[0m           = (known after apply)
+2022-06-16T00:58:06.1572093Z           [32m+[0m [0m[1m[0mencrypted[0m[0m             = (known after apply)
+2022-06-16T00:58:06.1572549Z           [32m+[0m [0m[1m[0miops[0m[0m                  = (known after apply)
+2022-06-16T00:58:06.1572990Z           [32m+[0m [0m[1m[0mkms_key_id[0m[0m            = (known after apply)
+2022-06-16T00:58:06.1573423Z           [32m+[0m [0m[1m[0mtags[0m[0m                  = (known after apply)
+2022-06-16T00:58:06.1573877Z           [32m+[0m [0m[1m[0mthroughput[0m[0m            = (known after apply)
+2022-06-16T00:58:06.1574340Z           [32m+[0m [0m[1m[0mvolume_id[0m[0m             = (known after apply)
+2022-06-16T00:58:06.1574796Z           [32m+[0m [0m[1m[0mvolume_size[0m[0m           = (known after apply)
+2022-06-16T00:58:06.1575235Z           [32m+[0m [0m[1m[0mvolume_type[0m[0m           = (known after apply)
+2022-06-16T00:58:06.1575519Z         }
+2022-06-16T00:58:06.1575729Z     }
+2022-06-16T00:58:06.1575864Z 
+2022-06-16T00:58:06.1576179Z [1m  # aws_security_group.mediawiki_sg[0m will be created[0m[0m
+2022-06-16T00:58:06.1576635Z [0m  [32m+[0m[0m resource "aws_security_group" "mediawiki_sg" {
+2022-06-16T00:58:06.1577093Z       [32m+[0m [0m[1m[0marn[0m[0m                    = (known after apply)
+2022-06-16T00:58:06.1577566Z       [32m+[0m [0m[1m[0mdescription[0m[0m            = "mediawiki Security Group"
+2022-06-16T00:58:06.1578085Z       [32m+[0m [0m[1m[0megress[0m[0m                 = [
+2022-06-16T00:58:06.1578404Z           [32m+[0m [0m{
+2022-06-16T00:58:06.1578743Z               [32m+[0m [0mcidr_blocks      = [
+2022-06-16T00:58:06.1579080Z                   [32m+[0m [0m"0.0.0.0/0",
+2022-06-16T00:58:06.1579320Z                 ]
+2022-06-16T00:58:06.1579729Z               [32m+[0m [0mdescription      = "Allow all ip and ports outboun"
+2022-06-16T00:58:06.1580145Z               [32m+[0m [0mfrom_port        = 0
+2022-06-16T00:58:06.1580499Z               [32m+[0m [0mipv6_cidr_blocks = []
+2022-06-16T00:58:06.1580878Z               [32m+[0m [0mprefix_list_ids  = []
+2022-06-16T00:58:06.1581265Z               [32m+[0m [0mprotocol         = "-1"
+2022-06-16T00:58:06.1581624Z               [32m+[0m [0msecurity_groups  = []
+2022-06-16T00:58:06.1582002Z               [32m+[0m [0mself             = false
+2022-06-16T00:58:06.1604932Z               [32m+[0m [0mto_port          = 0
+2022-06-16T00:58:06.1605264Z             },
+2022-06-16T00:58:06.1605490Z         ]
+2022-06-16T00:58:06.1605931Z       [32m+[0m [0m[1m[0mid[0m[0m                     = (known after apply)
+2022-06-16T00:58:06.1606335Z       [32m+[0m [0m[1m[0mingress[0m[0m                = [
+2022-06-16T00:58:06.1606829Z           [32m+[0m [0m{
+2022-06-16T00:58:06.1607177Z               [32m+[0m [0mcidr_blocks      = [
+2022-06-16T00:58:06.1607528Z                   [32m+[0m [0m"0.0.0.0/0",
+2022-06-16T00:58:06.1607812Z                 ]
+2022-06-16T00:58:06.1608200Z               [32m+[0m [0mdescription      = "Allow Port 22"
+2022-06-16T00:58:06.1608589Z               [32m+[0m [0mfrom_port        = 22
+2022-06-16T00:58:06.1608945Z               [32m+[0m [0mipv6_cidr_blocks = []
+2022-06-16T00:58:06.1609321Z               [32m+[0m [0mprefix_list_ids  = []
+2022-06-16T00:58:06.1609702Z               [32m+[0m [0mprotocol         = "tcp"
+2022-06-16T00:58:06.1610123Z               [32m+[0m [0msecurity_groups  = []
+2022-06-16T00:58:06.1610492Z               [32m+[0m [0mself             = false
+2022-06-16T00:58:06.1610840Z               [32m+[0m [0mto_port          = 22
+2022-06-16T00:58:06.1611081Z             },
+2022-06-16T00:58:06.1611366Z           [32m+[0m [0m{
+2022-06-16T00:58:06.1611699Z               [32m+[0m [0mcidr_blocks      = [
+2022-06-16T00:58:06.1612031Z                   [32m+[0m [0m"0.0.0.0/0",
+2022-06-16T00:58:06.1612279Z                 ]
+2022-06-16T00:58:06.1612644Z               [32m+[0m [0mdescription      = "Allow Port 80"
+2022-06-16T00:58:06.1613022Z               [32m+[0m [0mfrom_port        = 80
+2022-06-16T00:58:06.1613368Z               [32m+[0m [0mipv6_cidr_blocks = []
+2022-06-16T00:58:06.1613730Z               [32m+[0m [0mprefix_list_ids  = []
+2022-06-16T00:58:06.1614096Z               [32m+[0m [0mprotocol         = "tcp"
+2022-06-16T00:58:06.1614447Z               [32m+[0m [0msecurity_groups  = []
+2022-06-16T00:58:06.1614811Z               [32m+[0m [0mself             = false
+2022-06-16T00:58:06.1615164Z               [32m+[0m [0mto_port          = 80
+2022-06-16T00:58:06.1615401Z             },
+2022-06-16T00:58:06.1615616Z         ]
+2022-06-16T00:58:06.1615984Z       [32m+[0m [0m[1m[0mname[0m[0m                   = "mediawiki__sg"
+2022-06-16T00:58:06.1616421Z       [32m+[0m [0m[1m[0mname_prefix[0m[0m            = (known after apply)
+2022-06-16T00:58:06.1616872Z       [32m+[0m [0m[1m[0mowner_id[0m[0m               = (known after apply)
+2022-06-16T00:58:06.1617296Z       [32m+[0m [0m[1m[0mrevoke_rules_on_delete[0m[0m = false
+2022-06-16T00:58:06.1617740Z       [32m+[0m [0m[1m[0mtags_all[0m[0m               = (known after apply)
+2022-06-16T00:58:06.1618189Z       [32m+[0m [0m[1m[0mvpc_id[0m[0m                 = "vpc-0d2f1384a7024abd3"
+2022-06-16T00:58:06.1618475Z     }
+2022-06-16T00:58:06.1618612Z 
+2022-06-16T00:58:06.1618888Z [1m  # null_resource.example1[0m will be created[0m[0m
+2022-06-16T00:58:06.1657057Z [0m  [32m+[0m[0m resource "null_resource" "example1" {
+2022-06-16T00:58:06.1657475Z       [32m+[0m [0m[1m[0mid[0m[0m = (known after apply)
+2022-06-16T00:58:06.1657745Z     }
+2022-06-16T00:58:06.1657882Z 
+2022-06-16T00:58:06.1658122Z [0m[1mPlan:[0m 3 to add, 0 to change, 0 to destroy.
+2022-06-16T00:58:06.1658413Z [0m[0m
+2022-06-16T00:58:06.1658712Z [1mChanges to Outputs:[0m[0m
+2022-06-16T00:58:06.1659146Z   [32m+[0m [0m[1m[0mmediawiki_server_id[0m[0m         = (known after apply)
+2022-06-16T00:58:06.1659619Z   [32m+[0m [0m[1m[0mmediawiki_server_public_dns[0m[0m = (known after apply)
+2022-06-16T00:58:06.1660104Z   [32m+[0m [0m[1m[0mmediawiki_server_state[0m[0m      = (known after apply)
+2022-06-16T00:58:06.1660595Z   [32m+[0m [0m[1m[0msubnet_id[0m[0m                   = "subnet-02125c8c3aa17229a"
+2022-06-16T00:58:06.1661063Z   [32m+[0m [0m[1m[0mvpc_id[0m[0m                      = "vpc-0d2f1384a7024abd3"
+2022-06-16T00:58:07.1659976Z [0m[1maws_security_group.mediawiki_sg: Creating...[0m[0m
+2022-06-16T00:58:09.4769852Z [0m[1maws_security_group.mediawiki_sg: Creation complete after 2s [id=sg-0989d7fa814967e39][0m
+2022-06-16T00:58:09.4914273Z [0m[1maws_instance.mediawiki: Creating...[0m[0m
+2022-06-16T00:58:19.4938547Z [0m[1maws_instance.mediawiki: Still creating... [10s elapsed][0m[0m
+2022-06-16T00:58:29.4947370Z [0m[1maws_instance.mediawiki: Still creating... [20s elapsed][0m[0m
+2022-06-16T00:58:39.4941298Z [0m[1maws_instance.mediawiki: Still creating... [30s elapsed][0m[0m
+2022-06-16T00:58:41.1563114Z [0m[1maws_instance.mediawiki: Provisioning with 'remote-exec'...[0m[0m
+2022-06-16T00:58:41.1665332Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0mConnecting to remote host via SSH...
+2022-06-16T00:58:41.1666657Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0m  Host: 35.171.26.240
+2022-06-16T00:58:41.1719573Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0m  User: ec2-user
+2022-06-16T00:58:41.1720163Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0m  Password: false
+2022-06-16T00:58:41.1720667Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0m  Private key: true
+2022-06-16T00:58:41.1721171Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0m  Certificate: false
+2022-06-16T00:58:41.1721661Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0m  SSH Agent: false
+2022-06-16T00:58:41.1722178Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0m  Checking Host Key: false
+2022-06-16T00:58:41.1722706Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0m  Target Platform: unix
+2022-06-16T00:58:49.2915454Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0mConnecting to remote host via SSH...
+2022-06-16T00:58:49.2916127Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0m  Host: 35.171.26.240
+2022-06-16T00:58:49.2916638Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0m  User: ec2-user
+2022-06-16T00:58:49.2917144Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0m  Password: false
+2022-06-16T00:58:49.2919283Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0m  Private key: true
+2022-06-16T00:58:49.2920083Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0m  Certificate: false
+2022-06-16T00:58:49.2920750Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0m  SSH Agent: false
+2022-06-16T00:58:49.2921386Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0m  Checking Host Key: false
+2022-06-16T00:58:49.2921932Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0m  Target Platform: unix
+2022-06-16T00:58:49.4945198Z [0m[1maws_instance.mediawiki: Still creating... [40s elapsed][0m[0m
+2022-06-16T00:58:51.2932488Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0mConnecting to remote host via SSH...
+2022-06-16T00:58:51.2933142Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0m  Host: 35.171.26.240
+2022-06-16T00:58:51.2933757Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0m  User: ec2-user
+2022-06-16T00:58:51.2934686Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0m  Password: false
+2022-06-16T00:58:51.2935333Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0m  Private key: true
+2022-06-16T00:58:51.2943356Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0m  Certificate: false
+2022-06-16T00:58:51.2943991Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0m  SSH Agent: false
+2022-06-16T00:58:51.2944568Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0m  Checking Host Key: false
+2022-06-16T00:58:51.2945104Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0m  Target Platform: unix
+2022-06-16T00:58:55.2949827Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0mConnecting to remote host via SSH...
+2022-06-16T00:58:55.2950710Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0m  Host: 35.171.26.240
+2022-06-16T00:58:55.2951284Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0m  User: ec2-user
+2022-06-16T00:58:55.2951842Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0m  Password: false
+2022-06-16T00:58:55.2952453Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0m  Private key: true
+2022-06-16T00:58:55.2953079Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0m  Certificate: false
+2022-06-16T00:58:55.2953660Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0m  SSH Agent: false
+2022-06-16T00:58:55.2954541Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0m  Checking Host Key: false
+2022-06-16T00:58:55.2955151Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0m  Target Platform: unix
+2022-06-16T00:58:59.4947509Z [0m[1maws_instance.mediawiki: Still creating... [50s elapsed][0m[0m
+2022-06-16T00:59:03.2953023Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0mConnecting to remote host via SSH...
+2022-06-16T00:59:03.2953676Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0m  Host: 35.171.26.240
+2022-06-16T00:59:03.2954258Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0m  User: ec2-user
+2022-06-16T00:59:03.2954903Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0m  Password: false
+2022-06-16T00:59:03.2956908Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0m  Private key: true
+2022-06-16T00:59:03.2957815Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0m  Certificate: false
+2022-06-16T00:59:03.2958449Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0m  SSH Agent: false
+2022-06-16T00:59:03.2959062Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0m  Checking Host Key: false
+2022-06-16T00:59:03.2959603Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0m  Target Platform: unix
+2022-06-16T00:59:09.4948992Z [0m[1maws_instance.mediawiki: Still creating... [1m0s elapsed][0m[0m
+2022-06-16T00:59:19.2962143Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0mConnecting to remote host via SSH...
+2022-06-16T00:59:19.2969141Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0m  Host: 35.171.26.240
+2022-06-16T00:59:19.2969873Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0m  User: ec2-user
+2022-06-16T00:59:19.2970410Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0m  Password: false
+2022-06-16T00:59:19.2971101Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0m  Private key: true
+2022-06-16T00:59:19.2971691Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0m  Certificate: false
+2022-06-16T00:59:19.2972408Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0m  SSH Agent: false
+2022-06-16T00:59:19.2972999Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0m  Checking Host Key: false
+2022-06-16T00:59:19.2973591Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0m  Target Platform: unix
+2022-06-16T00:59:19.4951542Z [0m[1maws_instance.mediawiki: Still creating... [1m10s elapsed][0m[0m
+2022-06-16T00:59:29.4953813Z [0m[1maws_instance.mediawiki: Still creating... [1m20s elapsed][0m[0m
+2022-06-16T00:59:39.2969959Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0mConnecting to remote host via SSH...
+2022-06-16T00:59:39.2970779Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0m  Host: 35.171.26.240
+2022-06-16T00:59:39.2971707Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0m  User: ec2-user
+2022-06-16T00:59:39.2973601Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0m  Password: false
+2022-06-16T00:59:39.2974628Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0m  Private key: true
+2022-06-16T00:59:39.2975271Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0m  Certificate: false
+2022-06-16T00:59:39.2975850Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0m  SSH Agent: false
+2022-06-16T00:59:39.2976387Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0m  Checking Host Key: false
+2022-06-16T00:59:39.2977046Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0m  Target Platform: unix
+2022-06-16T00:59:40.0624353Z [0m[1maws_instance.mediawiki: Still creating... [1m30s elapsed][0m[0m
+2022-06-16T00:59:49.4960422Z [0m[1maws_instance.mediawiki: Still creating... [1m40s elapsed][0m[0m
+2022-06-16T00:59:59.2978664Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0mConnecting to remote host via SSH...
+2022-06-16T00:59:59.2979539Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0m  Host: 35.171.26.240
+2022-06-16T00:59:59.2980018Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0m  User: ec2-user
+2022-06-16T00:59:59.2982239Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0m  Password: false
+2022-06-16T00:59:59.2983783Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0m  Private key: true
+2022-06-16T00:59:59.2984479Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0m  Certificate: false
+2022-06-16T00:59:59.2985008Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0m  SSH Agent: false
+2022-06-16T00:59:59.2985907Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0m  Checking Host Key: false
+2022-06-16T00:59:59.2986493Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0m  Target Platform: unix
+2022-06-16T00:59:59.4961836Z [0m[1maws_instance.mediawiki: Still creating... [1m50s elapsed][0m[0m
+2022-06-16T01:00:00.0697511Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0mConnected!
+2022-06-16T01:00:09.4985067Z [0m[1maws_instance.mediawiki: Still creating... [2m0s elapsed][0m[0m
+2022-06-16T01:00:19.4993550Z [0m[1maws_instance.mediawiki: Still creating... [2m10s elapsed][0m[0m
+2022-06-16T01:00:29.5004664Z [0m[1maws_instance.mediawiki: Still creating... [2m21s elapsed][0m[0m
+2022-06-16T01:00:39.5015535Z [0m[1maws_instance.mediawiki: Still creating... [2m31s elapsed][0m[0m
+2022-06-16T01:00:49.5026761Z [0m[1maws_instance.mediawiki: Still creating... [2m41s elapsed][0m[0m
+2022-06-16T01:00:59.5035596Z [0m[1maws_instance.mediawiki: Still creating... [2m51s elapsed][0m[0m
+2022-06-16T01:01:09.5047747Z [0m[1maws_instance.mediawiki: Still creating... [3m1s elapsed][0m[0m
+2022-06-16T01:01:19.5056648Z [0m[1maws_instance.mediawiki: Still creating... [3m11s elapsed][0m[0m
+2022-06-16T01:01:29.5061443Z [0m[1maws_instance.mediawiki: Still creating... [3m21s elapsed][0m[0m
+2022-06-16T01:01:39.5074709Z [0m[1maws_instance.mediawiki: Still creating... [3m31s elapsed][0m[0m
+2022-06-16T01:01:49.5084462Z [0m[1maws_instance.mediawiki: Still creating... [3m41s elapsed][0m[0m
+2022-06-16T01:01:59.5095591Z [0m[1maws_instance.mediawiki: Still creating... [3m51s elapsed][0m[0m
+2022-06-16T01:02:09.5107502Z [0m[1maws_instance.mediawiki: Still creating... [4m1s elapsed][0m[0m
+2022-06-16T01:02:19.5118184Z [0m[1maws_instance.mediawiki: Still creating... [4m11s elapsed][0m[0m
+2022-06-16T01:02:29.5123105Z [0m[1maws_instance.mediawiki: Still creating... [4m21s elapsed][0m[0m
+2022-06-16T01:02:39.5126676Z [0m[1maws_instance.mediawiki: Still creating... [4m31s elapsed][0m[0m
+2022-06-16T01:02:43.7805068Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0mUpdating Subscription Management repositories.
+2022-06-16T01:02:43.7805943Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0mUnable to read consumer identity
+2022-06-16T01:02:43.7903686Z 
+2022-06-16T01:02:43.7904805Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0mThis system is not registered to Red Hat Subscription Management. You can use subscription-manager to register.
+2022-06-16T01:02:43.7905640Z 
+2022-06-16T01:02:45.0793865Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0mRed Hat ---  B/s |   0  B     --:-- ETA
+2022-06-16T01:02:45.1486343Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0mRed Hat  14 kB/s | 2.3 kB     00:00
+2022-06-16T01:02:45.2785956Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0mRed Hat ---  B/s |   0  B     --:-- ETA
+2022-06-16T01:02:45.5782929Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0mRed Hat  56 MB/s |  17 MB     00:00 ETA
+2022-06-16T01:02:45.8686651Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0mRed Hat  64 MB/s |  44 MB     00:00
+2022-06-16T01:02:49.5136118Z [0m[1maws_instance.mediawiki: Still creating... [4m41s elapsed][0m[0m
+2022-06-16T01:02:55.2644285Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0mRed Hat ---  B/s |   0  B     --:-- ETA
+2022-06-16T01:02:55.5641200Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0mRed Hat  59 MB/s |  18 MB     00:00 ETA
+2022-06-16T01:02:55.8758542Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0mRed Hat  61 MB/s |  44 MB     00:00 ETA
+2022-06-16T01:02:55.8937722Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0mRed Hat  66 MB/s |  47 MB     00:00
+2022-06-16T01:02:59.5147069Z [0m[1maws_instance.mediawiki: Still creating... [4m51s elapsed][0m[0m
+2022-06-16T01:03:09.5154414Z [0m[1maws_instance.mediawiki: Still creating... [5m1s elapsed][0m[0m
+2022-06-16T01:03:10.2367315Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0mDependencies resolved.
+2022-06-16T01:03:10.2501196Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0m========================================
+2022-06-16T01:03:10.2502113Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0m Package   Arch   Version       Repo
+2022-06-16T01:03:10.2502966Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0m                                   Size
+2022-06-16T01:03:10.2503524Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0m========================================
+2022-06-16T01:03:10.2504160Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0mInstalling:
+2022-06-16T01:03:10.2504920Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0m [1m[32mpython36 (B[m x86_64 3.6.8-38.module+el8.5.0+12207+5c5719bc
+2022-06-16T01:03:10.2505652Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0m                                rhel-8-appstream-rhui-rpms
+2022-06-16T01:03:10.2506234Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0m                                   19 k
+2022-06-16T01:03:10.2506789Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0mUpgrading:
+2022-06-16T01:03:10.2507476Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0m [1m[32mchkconfig(B[m x86_64 1.19.1-1.el8  rhel-8-baseos-rhui-rpms
+2022-06-16T01:03:10.2508118Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0m                                  198 k
+2022-06-16T01:03:10.2508718Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0mInstalling dependencies:
+2022-06-16T01:03:10.2509395Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0m [1m[32mpython3-pip(B[m
+2022-06-16T01:03:10.2510086Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0m           noarch 9.0.3-19.el8  rhel-8-appstream-rhui-rpms
+2022-06-16T01:03:10.2510681Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0m                                   20 k
+2022-06-16T01:03:10.2511338Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0m [1m[32mpython3-setuptools(B[m
+2022-06-16T01:03:10.2512075Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0m           noarch 39.2.0-6.el8  rhel-8-baseos-rhui-rpms
+2022-06-16T01:03:10.2512716Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0m                                  163 k
+2022-06-16T01:03:10.2513247Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0mEnabling module streams:
+2022-06-16T01:03:10.2513868Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0m python36         3.6
+2022-06-16T01:03:10.2514471Z 
+2022-06-16T01:03:10.2514802Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0mTransaction Summary
+2022-06-16T01:03:10.2515345Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0m========================================
+2022-06-16T01:03:10.2515928Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0mInstall  3 Packages
+2022-06-16T01:03:10.2516503Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0mUpgrade  1 Package
+2022-06-16T01:03:10.2516828Z 
+2022-06-16T01:03:10.2517175Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0mTotal download size: 400 k
+2022-06-16T01:03:10.2517718Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0mDownloading Packages:
+2022-06-16T01:03:10.3692094Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0mRed Hat  61 MB/s |   0  B     00:00 ETA
+2022-06-16T01:03:10.3693090Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0m(1/4):  ---  B/s |   0  B     --:-- ETA
+2022-06-16T01:03:10.3693903Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0m(1/4):  352 kB/s |  19 kB     00:00
+2022-06-16T01:03:10.3723274Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0m(2-3/4) 351 kB/s |  19 kB     00:01 ETA
+2022-06-16T01:03:10.3841857Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0m(2/4):  337 kB/s |  20 kB     00:00
+2022-06-16T01:03:10.3898239Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0m(3-4/4) 374 kB/s | 135 kB     00:00 ETA
+2022-06-16T01:03:10.3898818Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0m(3/4):  2.6 MB/s | 163 kB     00:00
+2022-06-16T01:03:10.3899330Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0m(4/4):  387 kB/s | 202 kB     00:00 ETA
+2022-06-16T01:03:10.3899853Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0m(4/4):   13 MB/s | 198 kB     00:00
+2022-06-16T01:03:10.3900399Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0m----------------------------------------
+2022-06-16T01:03:10.3900934Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0mTotal   2.7 MB/s | 400 kB     00:00
+2022-06-16T01:03:10.3935270Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0mRunning transaction check
+2022-06-16T01:03:10.4954763Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0mTransaction check succeeded.
+2022-06-16T01:03:10.4955382Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0mRunning transaction test
+2022-06-16T01:03:10.8613840Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0mTransaction test succeeded.
+2022-06-16T01:03:10.8641190Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0mRunning transaction
+2022-06-16T01:03:10.9445234Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0m  Preparing        :  [==         ] 1/1
+2022-06-16T01:03:10.9445858Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0m  Preparing        :  [====       ] 1/1
+2022-06-16T01:03:10.9446383Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0m  Preparing        :  [======     ] 1/1
+2022-06-16T01:03:10.9446921Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0m  Preparing        :  [========   ] 1/1
+2022-06-16T01:03:10.9447478Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0m  Preparing        :                1/1
+2022-06-16T01:03:11.2254352Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0m  Upgrading        : chkco [      ] 1/5
+2022-06-16T01:03:11.2254978Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0m  Upgrading        : chkco [=     ] 1/5
+2022-06-16T01:03:11.2255557Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0m  Upgrading        : chkco [==    ] 1/5
+2022-06-16T01:03:11.3506552Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0m  Upgrading        : chkco [===   ] 1/5
+2022-06-16T01:03:11.3507185Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0m  Upgrading        : chkco [====  ] 1/5
+2022-06-16T01:03:11.3507744Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0m  Upgrading        : chkco [===== ] 1/5
+2022-06-16T01:03:11.3508301Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0m  Upgrading        : chkconfig-1.   1/5
+2022-06-16T01:03:11.9126723Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0m  Installing       : pytho [      ] 2/5
+2022-06-16T01:03:11.9128159Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0m  Installing       : pytho [=     ] 2/5
+2022-06-16T01:03:11.9129094Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0m  Installing       : pytho [==    ] 2/5
+2022-06-16T01:03:11.9160710Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0m  Installing       : pytho [===   ] 2/5
+2022-06-16T01:03:11.9161330Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0m  Installing       : pytho [====  ] 2/5
+2022-06-16T01:03:11.9161864Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0m  Installing       : pytho [===== ] 2/5
+2022-06-16T01:03:11.9162417Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0m  Installing       : python3-setu   2/5
+2022-06-16T01:03:12.1449287Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0m  Installing       : pytho [      ] 3/5
+2022-06-16T01:03:12.1450385Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0m  Installing       : pytho [===== ] 3/5
+2022-06-16T01:03:12.1451232Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0m  Installing       : python36-3.6   3/5
+2022-06-16T01:03:12.2517982Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0m  Running scriptlet: python36-3.6   3/5
+2022-06-16T01:03:12.3342256Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0m  Installing       : pytho [      ] 4/5
+2022-06-16T01:03:12.3343477Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0m  Installing       : pytho [=     ] 4/5
+2022-06-16T01:03:12.3344338Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0m  Installing       : pytho [===   ] 4/5
+2022-06-16T01:03:12.3345098Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0m  Installing       : pytho [====  ] 4/5
+2022-06-16T01:03:12.3378455Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0m  Installing       : pytho [===== ] 4/5
+2022-06-16T01:03:12.3379059Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0m  Installing       : python3-pip-   4/5
+2022-06-16T01:03:12.3540227Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0m  Cleanup          : chkco [      ] 5/5
+2022-06-16T01:03:12.3540856Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0m  Cleanup          : chkco [=     ] 5/5
+2022-06-16T01:03:12.3541403Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0m  Cleanup          : chkco [==    ] 5/5
+2022-06-16T01:03:12.3541962Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0m  Cleanup          : chkco [===   ] 5/5
+2022-06-16T01:03:12.3542659Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0m  Cleanup          : chkco [====  ] 5/5
+2022-06-16T01:03:12.3543224Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0m  Cleanup          : chkco [===== ] 5/5
+2022-06-16T01:03:12.3543765Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0m  Cleanup          : chkconfig-1.   5/5
+2022-06-16T01:03:12.3837122Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0m  Running scriptlet: chkconfig-1.   5/5
+2022-06-16T01:03:12.7364255Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0m  Verifying        : python3-pip-   1/5
+2022-06-16T01:03:12.7365325Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0m  Verifying        : python36-3.6   2/5
+2022-06-16T01:03:12.7366143Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0m  Verifying        : python3-setu   3/5
+2022-06-16T01:03:12.7366910Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0m  Verifying        : chkconfig-1.   4/5
+2022-06-16T01:03:12.7367687Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0m  Verifying        : chkconfig-1.   5/5
+2022-06-16T01:03:13.0766404Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0mInstalled products updated.
+2022-06-16T01:03:13.1664989Z 
+2022-06-16T01:03:13.2177427Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0mUpgraded:
+2022-06-16T01:03:13.2178043Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0m  chkconfig-1.19.1-1.el8.x86_64
+2022-06-16T01:03:13.2178532Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0mInstalled:
+2022-06-16T01:03:13.2179405Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0m  python3-pip-9.0.3-19.el8.noarch
+2022-06-16T01:03:13.2180011Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0m  python3-setuptools-39.2.0-6.el8.noarch
+2022-06-16T01:03:13.2180670Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0m  python36-3.6.8-38.module+el8.5.0+12207+5c5719bc.x86_64
+2022-06-16T01:03:13.2180964Z 
+2022-06-16T01:03:13.2181227Z [0m[1maws_instance.mediawiki (remote-exec):[0m [0mComplete!
+2022-06-16T01:03:13.6032883Z [0m[1maws_instance.mediawiki: Creation complete after 5m5s [id=i-020b8743b479169e2][0m
+2022-06-16T01:03:13.6158371Z [0m[1mnull_resource.example1: Creating...[0m[0m
+2022-06-16T01:03:13.6208387Z [0m[1mnull_resource.example1: Provisioning with 'local-exec'...[0m[0m
+2022-06-16T01:03:13.6216763Z [0m[1mnull_resource.example1 (local-exec):[0m [0mExecuting: ["/bin/sh" "-c" "        sleep 30;\n        echo [web] > inv;\n        echo ec2-35-171-26-240.compute-1.amazonaws.com >> inv;\n        export ANSIBLE_HOST_KEY_CHECKING=False;\n        ansible-playbook -u ec2-user --private-key ../key/ubuntu_key.pem -i inv ../ansible_playbook/mediawiki_playbook.yml\n"]
+2022-06-16T01:03:23.6170775Z [0m[1mnull_resource.example1: Still creating... [10s elapsed][0m[0m
+2022-06-16T01:03:33.6174876Z [0m[1mnull_resource.example1: Still creating... [20s elapsed][0m[0m
+2022-06-16T01:03:43.6185975Z [0m[1mnull_resource.example1: Still creating... [30s elapsed][0m[0m
+2022-06-16T01:03:45.1929233Z 
+2022-06-16T01:03:45.1930283Z [0m[1mnull_resource.example1 (local-exec):[0m [0mPLAY [POC mediawiki server] ****************************************************
+2022-06-16T01:03:45.2220651Z 
+2022-06-16T01:03:45.2221884Z [0m[1mnull_resource.example1 (local-exec):[0m [0mTASK [Install packages] ********************************************************
+2022-06-16T01:03:53.6187702Z [0m[1mnull_resource.example1: Still creating... [40s elapsed][0m[0m
+2022-06-16T01:04:03.6197128Z [0m[1mnull_resource.example1: Still creating... [50s elapsed][0m[0m
+2022-06-16T01:04:13.6198289Z [0m[1mnull_resource.example1: Still creating... [1m0s elapsed][0m[0m
+2022-06-16T01:04:23.6389988Z [0m[1mnull_resource.example1: Still creating... [1m10s elapsed][0m[0m
+2022-06-16T01:04:23.9936861Z [0m[1mnull_resource.example1 (local-exec):[0m [0m[WARNING]: Consider using the dnf module rather than running 'dnf'.  If you
+2022-06-16T01:04:23.9938022Z [0m[1mnull_resource.example1 (local-exec):[0m [0mneed to use command because dnf is insufficient you can add 'warn: false' to
+2022-06-16T01:04:23.9938800Z [0m[1mnull_resource.example1 (local-exec):[0m [0mthis command task or set 'command_warnings=False' in ansible.cfg to get rid of
+2022-06-16T01:04:23.9939522Z [0m[1mnull_resource.example1 (local-exec):[0m [0mthis message.
+2022-06-16T01:04:23.9944862Z [0m[1mnull_resource.example1 (local-exec):[0m [0mchanged: [ec2-35-171-26-240.compute-1.amazonaws.com]
+2022-06-16T01:04:24.0010836Z 
+2022-06-16T01:04:24.0011448Z [0m[1mnull_resource.example1 (local-exec):[0m [0mTASK [debug] *******************************************************************
+2022-06-16T01:04:24.0584278Z [0m[1mnull_resource.example1 (local-exec):[0m [0mok: [ec2-35-171-26-240.compute-1.amazonaws.com] => {
+2022-06-16T01:04:24.0585279Z [0m[1mnull_resource.example1 (local-exec):[0m [0m    "packages.stdout_lines": [
+2022-06-16T01:04:24.0586237Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "Updating Subscription Management repositories.",
+2022-06-16T01:04:24.0587134Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "Unable to read consumer identity",
+2022-06-16T01:04:24.0587838Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "",
+2022-06-16T01:04:24.0588831Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "This system is not registered to Red Hat Subscription Management. You can use subscription-manager to register.",
+2022-06-16T01:04:24.0589840Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "",
+2022-06-16T01:04:24.0591050Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "Last metadata expiration check: 0:00:52 ago on Thu Jun 16 01:02:55 2022.",
+2022-06-16T01:04:24.0591947Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "Dependencies resolved.",
+2022-06-16T01:04:24.0592780Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "Nothing to do.",
+2022-06-16T01:04:24.0593662Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "Complete!",
+2022-06-16T01:04:24.0594440Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "Updating Subscription Management repositories.",
+2022-06-16T01:04:24.0595305Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "Unable to read consumer identity",
+2022-06-16T01:04:24.0596658Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "",
+2022-06-16T01:04:24.0600260Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "This system is not registered to Red Hat Subscription Management. You can use subscription-manager to register.",
+2022-06-16T01:04:24.0602393Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "",
+2022-06-16T01:04:24.0607329Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "Last metadata expiration check: 0:00:56 ago on Thu Jun 16 01:02:55 2022.",
+2022-06-16T01:04:24.0609219Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "Dependencies resolved.",
+2022-06-16T01:04:24.0619363Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "================================================================================",
+2022-06-16T01:04:24.0653430Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        " Package           Architecture     Version             Repository         Size",
+2022-06-16T01:04:24.0658922Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "================================================================================",
+2022-06-16T01:04:24.0664722Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "Enabling module streams:",
+2022-06-16T01:04:24.0669975Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        " httpd                              2.4                                        ",
+2022-06-16T01:04:24.0675424Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        " nginx                              1.14                                       ",
+2022-06-16T01:04:24.0681311Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        " php                                7.4                                        ",
+2022-06-16T01:04:24.0683909Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "",
+2022-06-16T01:04:24.0686707Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "Transaction Summary",
+2022-06-16T01:04:24.0692149Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "================================================================================",
+2022-06-16T01:04:24.0694639Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "",
+2022-06-16T01:04:24.0699349Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "Complete!",
+2022-06-16T01:04:24.0706642Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "Updating Subscription Management repositories.",
+2022-06-16T01:04:24.0712644Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "Unable to read consumer identity",
+2022-06-16T01:04:24.0716053Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "",
+2022-06-16T01:04:24.0722373Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "This system is not registered to Red Hat Subscription Management. You can use subscription-manager to register.",
+2022-06-16T01:04:24.0725844Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "",
+2022-06-16T01:04:24.0736595Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "Last metadata expiration check: 0:01:01 ago on Thu Jun 16 01:02:55 2022.",
+2022-06-16T01:04:24.0745665Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "Dependencies resolved.",
+2022-06-16T01:04:24.0752861Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "===================================================================================================================",
+2022-06-16T01:04:24.0758928Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        " Package                      Arch    Version                                     Repository                   Size",
+2022-06-16T01:04:24.0763251Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "===================================================================================================================",
+2022-06-16T01:04:24.0788646Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "Installing:",
+2022-06-16T01:04:24.0795347Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        " httpd                        x86_64  2.4.37-47.module+el8.6.0+14529+083145da.1   rhel-8-appstream-rhui-rpms  1.4 M",
+2022-06-16T01:04:24.0800075Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        " mariadb                      x86_64  3:10.3.32-2.module+el8.5.0+14124+14ced695   rhel-8-appstream-rhui-rpms  6.0 M",
+2022-06-16T01:04:24.0809461Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        " mariadb-server               x86_64  3:10.3.32-2.module+el8.5.0+14124+14ced695   rhel-8-appstream-rhui-rpms   16 M",
+2022-06-16T01:04:24.0817429Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        " mod_ssl                      x86_64  1:2.4.37-47.module+el8.6.0+14529+083145da.1 rhel-8-appstream-rhui-rpms  137 k",
+2022-06-16T01:04:24.0861380Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        " php                          x86_64  7.4.19-2.module+el8.6.0+13953+0a59ce9f      rhel-8-appstream-rhui-rpms  1.5 M",
+2022-06-16T01:04:24.0862452Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        " php-gd                       x86_64  7.4.19-2.module+el8.6.0+13953+0a59ce9f      rhel-8-appstream-rhui-rpms   85 k",
+2022-06-16T01:04:24.0863686Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        " php-intl                     x86_64  7.4.19-2.module+el8.6.0+13953+0a59ce9f      rhel-8-appstream-rhui-rpms  193 k",
+2022-06-16T01:04:24.0864804Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        " php-json                     x86_64  7.4.19-2.module+el8.6.0+13953+0a59ce9f      rhel-8-appstream-rhui-rpms   74 k",
+2022-06-16T01:04:24.0875855Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        " php-mbstring                 x86_64  7.4.19-2.module+el8.6.0+13953+0a59ce9f      rhel-8-appstream-rhui-rpms  484 k",
+2022-06-16T01:04:24.0878562Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        " php-mysqlnd                  x86_64  7.4.19-2.module+el8.6.0+13953+0a59ce9f      rhel-8-appstream-rhui-rpms  193 k",
+2022-06-16T01:04:24.0884329Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        " php-pecl-apcu                x86_64  5.1.18-1.module+el8.3.0+6678+b09f589e       rhel-8-appstream-rhui-rpms   64 k",
+2022-06-16T01:04:24.0890278Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        " php-xml                      x86_64  7.4.19-2.module+el8.6.0+13953+0a59ce9f      rhel-8-appstream-rhui-rpms  174 k",
+2022-06-16T01:04:24.0895903Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        " wget                         x86_64  1.19.5-10.el8                               rhel-8-appstream-rhui-rpms  734 k",
+2022-06-16T01:04:24.0899212Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "Installing dependencies:",
+2022-06-16T01:04:24.0915033Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        " apr                          x86_64  1.6.3-12.el8                                rhel-8-appstream-rhui-rpms  130 k",
+2022-06-16T01:04:24.0922937Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        " apr-util                     x86_64  1.6.1-6.el8                                 rhel-8-appstream-rhui-rpms  105 k",
+2022-06-16T01:04:24.0930910Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        " dejavu-fonts-common          noarch  2.35-7.el8                                  rhel-8-baseos-rhui-rpms      74 k",
+2022-06-16T01:04:24.0953825Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        " dejavu-sans-fonts            noarch  2.35-7.el8                                  rhel-8-baseos-rhui-rpms     1.5 M",
+2022-06-16T01:04:24.0984676Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        " fontconfig                   x86_64  2.13.1-4.el8                                rhel-8-baseos-rhui-rpms     274 k",
+2022-06-16T01:04:24.0991657Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        " fontpackages-filesystem      noarch  1.44-22.el8                                 rhel-8-baseos-rhui-rpms      16 k",
+2022-06-16T01:04:24.1000958Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        " gd                           x86_64  2.2.5-7.el8                                 rhel-8-appstream-rhui-rpms  144 k",
+2022-06-16T01:04:24.1010362Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        " httpd-filesystem             noarch  2.4.37-47.module+el8.6.0+14529+083145da.1   rhel-8-appstream-rhui-rpms   41 k",
+2022-06-16T01:04:24.1018138Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        " httpd-tools                  x86_64  2.4.37-47.module+el8.6.0+14529+083145da.1   rhel-8-appstream-rhui-rpms  108 k",
+2022-06-16T01:04:24.1029180Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        " jbigkit-libs                 x86_64  2.1-14.el8                                  rhel-8-appstream-rhui-rpms   55 k",
+2022-06-16T01:04:24.1032556Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        " libX11                       x86_64  1.6.8-5.el8                                 rhel-8-appstream-rhui-rpms  611 k",
+2022-06-16T01:04:24.1040756Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        " libX11-common                noarch  1.6.8-5.el8                                 rhel-8-appstream-rhui-rpms  158 k",
+2022-06-16T01:04:24.1047771Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        " libXau                       x86_64  1.0.9-3.el8                                 rhel-8-appstream-rhui-rpms   37 k",
+2022-06-16T01:04:24.1056764Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        " libXpm                       x86_64  3.5.12-8.el8                                rhel-8-appstream-rhui-rpms   58 k",
+2022-06-16T01:04:24.1077158Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        " libaio                       x86_64  0.3.112-1.el8                               rhel-8-baseos-rhui-rpms      33 k",
+2022-06-16T01:04:24.1083118Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        " libicu                       x86_64  60.3-2.el8_1                                rhel-8-baseos-rhui-rpms     8.8 M",
+2022-06-16T01:04:24.1088590Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        " libjpeg-turbo                x86_64  1.5.3-12.el8                                rhel-8-appstream-rhui-rpms  157 k",
+2022-06-16T01:04:24.1095595Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        " libtiff                      x86_64  4.0.9-21.el8                                rhel-8-appstream-rhui-rpms  188 k",
+2022-06-16T01:04:24.1101828Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        " libwebp                      x86_64  1.0.0-5.el8                                 rhel-8-appstream-rhui-rpms  273 k",
+2022-06-16T01:04:24.1144743Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        " libxcb                       x86_64  1.13.1-1.el8                                rhel-8-appstream-rhui-rpms  229 k",
+2022-06-16T01:04:24.1151268Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        " libxslt                      x86_64  1.1.32-6.el8                                rhel-8-baseos-rhui-rpms     250 k",
+2022-06-16T01:04:24.1163087Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        " mailcap                      noarch  2.1.48-3.el8                                rhel-8-baseos-rhui-rpms      39 k",
+2022-06-16T01:04:24.1176317Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        " mariadb-common               x86_64  3:10.3.32-2.module+el8.5.0+14124+14ced695   rhel-8-appstream-rhui-rpms   64 k",
+2022-06-16T01:04:24.1178762Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        " mariadb-connector-c          x86_64  3.1.11-2.el8_3                              rhel-8-appstream-rhui-rpms  200 k",
+2022-06-16T01:04:24.1190634Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        " mariadb-connector-c-config   noarch  3.1.11-2.el8_3                              rhel-8-appstream-rhui-rpms   15 k",
+2022-06-16T01:04:24.1198383Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        " mariadb-errmsg               x86_64  3:10.3.32-2.module+el8.5.0+14124+14ced695   rhel-8-appstream-rhui-rpms  234 k",
+2022-06-16T01:04:24.1204180Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        " mod_http2                    x86_64  1.15.7-5.module+el8.6.0+13996+01710940      rhel-8-appstream-rhui-rpms  155 k",
+2022-06-16T01:04:24.1212778Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        " nginx-filesystem             noarch  1:1.14.1-9.module+el8.0.0+4108+af250afe     rhel-8-appstream-rhui-rpms   24 k",
+2022-06-16T01:04:24.1225499Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        " oniguruma                    x86_64  6.8.2-2.el8                                 rhel-8-appstream-rhui-rpms  187 k",
+2022-06-16T01:04:24.1230460Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        " perl-Carp                    noarch  1.42-396.el8                                rhel-8-baseos-rhui-rpms      30 k",
+2022-06-16T01:04:24.1239051Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        " perl-DBD-MySQL               x86_64  4.046-3.module+el8.1.0+2938+301254e2        rhel-8-appstream-rhui-rpms  156 k",
+2022-06-16T01:04:24.1246604Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        " perl-DBI                     x86_64  1.641-4.module+el8.6.0+13388+70c0920f       rhel-8-appstream-rhui-rpms  741 k",
+2022-06-16T01:04:24.1252581Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        " perl-Data-Dumper             x86_64  2.167-399.el8                               rhel-8-baseos-rhui-rpms      58 k",
+2022-06-16T01:04:24.1261016Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        " perl-Digest                  noarch  1.17-395.el8                                rhel-8-appstream-rhui-rpms   27 k",
+2022-06-16T01:04:24.1270427Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        " perl-Digest-MD5              x86_64  2.55-396.el8                                rhel-8-appstream-rhui-rpms   37 k",
+2022-06-16T01:04:24.1280511Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        " perl-Encode                  x86_64  4:2.97-3.el8                                rhel-8-baseos-rhui-rpms     1.5 M",
+2022-06-16T01:04:24.1282698Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        " perl-Errno                   x86_64  1.28-421.el8                                rhel-8-baseos-rhui-rpms      76 k",
+2022-06-16T01:04:24.1290319Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        " perl-Exporter                noarch  5.72-396.el8                                rhel-8-baseos-rhui-rpms      34 k",
+2022-06-16T01:04:24.1305375Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        " perl-File-Path               noarch  2.15-2.el8                                  rhel-8-baseos-rhui-rpms      38 k",
+2022-06-16T01:04:24.1308656Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        " perl-File-Temp               noarch  0.230.600-1.el8                             rhel-8-baseos-rhui-rpms      63 k",
+2022-06-16T01:04:24.1316562Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        " perl-Getopt-Long             noarch  1:2.50-4.el8                                rhel-8-baseos-rhui-rpms      63 k",
+2022-06-16T01:04:24.1325638Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        " perl-HTTP-Tiny               noarch  0.074-1.el8                                 rhel-8-baseos-rhui-rpms      58 k",
+2022-06-16T01:04:24.1335331Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        " perl-IO                      x86_64  1.38-421.el8                                rhel-8-baseos-rhui-rpms     142 k",
+2022-06-16T01:04:24.1344294Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        " perl-MIME-Base64             x86_64  3.15-396.el8                                rhel-8-baseos-rhui-rpms      31 k",
+2022-06-16T01:04:24.1355083Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        " perl-Math-BigInt             noarch  1:1.9998.11-7.el8                           rhel-8-baseos-rhui-rpms     196 k",
+2022-06-16T01:04:24.1364280Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        " perl-Math-Complex            noarch  1.59-421.el8                                rhel-8-baseos-rhui-rpms     109 k",
+2022-06-16T01:04:24.1378233Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        " perl-Net-SSLeay              x86_64  1.88-2.module+el8.6.0+13392+f0897f98        rhel-8-appstream-rhui-rpms  379 k",
+2022-06-16T01:04:24.1388996Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        " perl-PathTools               x86_64  3.74-1.el8                                  rhel-8-baseos-rhui-rpms      90 k",
+2022-06-16T01:04:24.1468724Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        " perl-Pod-Escapes             noarch  1:1.07-395.el8                              rhel-8-baseos-rhui-rpms      20 k",
+2022-06-16T01:04:24.1469910Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        " perl-Pod-Perldoc             noarch  3.28-396.el8                                rhel-8-baseos-rhui-rpms      88 k",
+2022-06-16T01:04:24.1470628Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        " perl-Pod-Simple              noarch  1:3.35-395.el8                              rhel-8-baseos-rhui-rpms     213 k",
+2022-06-16T01:04:24.1481629Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        " perl-Pod-Usage               noarch  4:1.69-395.el8                              rhel-8-baseos-rhui-rpms      34 k",
+2022-06-16T01:04:24.1504929Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        " perl-Scalar-List-Utils       x86_64  3:1.49-2.el8                                rhel-8-baseos-rhui-rpms      68 k",
+2022-06-16T01:04:24.1509731Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        " perl-Socket                  x86_64  4:2.027-3.el8                               rhel-8-baseos-rhui-rpms      59 k",
+2022-06-16T01:04:24.1528200Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        " perl-Storable                x86_64  1:3.11-3.el8                                rhel-8-baseos-rhui-rpms      98 k",
+2022-06-16T01:04:24.1537272Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        " perl-Term-ANSIColor          noarch  4.06-396.el8                                rhel-8-baseos-rhui-rpms      46 k",
+2022-06-16T01:04:24.1539702Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        " perl-Term-Cap                noarch  1.17-395.el8                                rhel-8-baseos-rhui-rpms      23 k",
+2022-06-16T01:04:24.1546188Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        " perl-Text-ParseWords         noarch  3.30-395.el8                                rhel-8-baseos-rhui-rpms      18 k",
+2022-06-16T01:04:24.1554392Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        " perl-Text-Tabs+Wrap          noarch  2013.0523-395.el8                           rhel-8-baseos-rhui-rpms      24 k",
+2022-06-16T01:04:24.1562514Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        " perl-Time-Local              noarch  1:1.280-1.el8                               rhel-8-baseos-rhui-rpms      34 k",
+2022-06-16T01:04:24.1608982Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        " perl-URI                     noarch  1.73-3.el8                                  rhel-8-appstream-rhui-rpms  116 k",
+2022-06-16T01:04:24.1630393Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        " perl-Unicode-Normalize       x86_64  1.25-396.el8                                rhel-8-baseos-rhui-rpms      82 k",
+2022-06-16T01:04:24.1640094Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        " perl-constant                noarch  1.33-396.el8                                rhel-8-baseos-rhui-rpms      25 k",
+2022-06-16T01:04:24.1648227Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        " perl-interpreter             x86_64  4:5.26.3-421.el8                            rhel-8-baseos-rhui-rpms     6.3 M",
+2022-06-16T01:04:24.1666619Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        " perl-libnet                  noarch  3.11-3.el8                                  rhel-8-appstream-rhui-rpms  121 k",
+2022-06-16T01:04:24.1668715Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        " perl-libs                    x86_64  4:5.26.3-421.el8                            rhel-8-baseos-rhui-rpms     1.6 M",
+2022-06-16T01:04:24.1678278Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        " perl-macros                  x86_64  4:5.26.3-421.el8                            rhel-8-baseos-rhui-rpms      72 k",
+2022-06-16T01:04:24.1686362Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        " perl-parent                  noarch  1:0.237-1.el8                               rhel-8-baseos-rhui-rpms      20 k",
+2022-06-16T01:04:24.1698768Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        " perl-podlators               noarch  4.11-1.el8                                  rhel-8-baseos-rhui-rpms     118 k",
+2022-06-16T01:04:24.1714159Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        " perl-threads                 x86_64  1:2.21-2.el8                                rhel-8-baseos-rhui-rpms      61 k",
+2022-06-16T01:04:24.1733274Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        " perl-threads-shared          x86_64  1.58-2.el8                                  rhel-8-baseos-rhui-rpms      48 k",
+2022-06-16T01:04:24.1766521Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        " php-common                   x86_64  7.4.19-2.module+el8.6.0+13953+0a59ce9f      rhel-8-appstream-rhui-rpms  702 k",
+2022-06-16T01:04:24.1781015Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        " php-pdo                      x86_64  7.4.19-2.module+el8.6.0+13953+0a59ce9f      rhel-8-appstream-rhui-rpms  123 k",
+2022-06-16T01:04:24.1798936Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        " redhat-logos-httpd           noarch  84.5-1.el8                                  rhel-8-baseos-rhui-rpms      29 k",
+2022-06-16T01:04:24.1805838Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        " sscg                         x86_64  2.3.3-14.el8                                rhel-8-appstream-rhui-rpms   49 k",
+2022-06-16T01:04:24.1817643Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "Installing weak dependencies:",
+2022-06-16T01:04:24.1837266Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        " apr-util-bdb                 x86_64  1.6.1-6.el8                                 rhel-8-appstream-rhui-rpms   25 k",
+2022-06-16T01:04:24.1848922Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        " apr-util-openssl             x86_64  1.6.1-6.el8                                 rhel-8-appstream-rhui-rpms   27 k",
+2022-06-16T01:04:24.1854974Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        " mariadb-backup               x86_64  3:10.3.32-2.module+el8.5.0+14124+14ced695   rhel-8-appstream-rhui-rpms  6.1 M",
+2022-06-16T01:04:24.1862569Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        " mariadb-gssapi-server        x86_64  3:10.3.32-2.module+el8.5.0+14124+14ced695   rhel-8-appstream-rhui-rpms   52 k",
+2022-06-16T01:04:24.1869370Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        " mariadb-server-utils         x86_64  3:10.3.32-2.module+el8.5.0+14124+14ced695   rhel-8-appstream-rhui-rpms  1.1 M",
+2022-06-16T01:04:24.1912162Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        " perl-IO-Socket-IP            noarch  0.39-5.el8                                  rhel-8-appstream-rhui-rpms   47 k",
+2022-06-16T01:04:24.1919396Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        " perl-IO-Socket-SSL           noarch  2.066-4.module+el8.3.0+6446+594cad75        rhel-8-appstream-rhui-rpms  298 k",
+2022-06-16T01:04:24.1940933Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        " perl-Mozilla-CA              noarch  20160104-7.module+el8.3.0+6498+9eecfe51     rhel-8-appstream-rhui-rpms   15 k",
+2022-06-16T01:04:24.1948246Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        " php-cli                      x86_64  7.4.19-2.module+el8.6.0+13953+0a59ce9f      rhel-8-appstream-rhui-rpms  3.1 M",
+2022-06-16T01:04:24.1971548Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        " php-fpm                      x86_64  7.4.19-2.module+el8.6.0+13953+0a59ce9f      rhel-8-appstream-rhui-rpms  1.6 M",
+2022-06-16T01:04:24.1981720Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        " php-opcache                  x86_64  7.4.19-2.module+el8.6.0+13953+0a59ce9f      rhel-8-appstream-rhui-rpms  267 k",
+2022-06-16T01:04:24.1991763Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "Enabling module streams:",
+2022-06-16T01:04:24.1999430Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        " mariadb                              10.3                                                                         ",
+2022-06-16T01:04:24.2010699Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        " perl                                 5.26                                                                         ",
+2022-06-16T01:04:24.2018902Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        " perl-DBD-MySQL                       4.046                                                                        ",
+2022-06-16T01:04:24.2043278Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        " perl-DBI                             1.641                                                                        ",
+2022-06-16T01:04:24.2061404Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        " perl-IO-Socket-SSL                   2.066                                                                        ",
+2022-06-16T01:04:24.2082266Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        " perl-libwww-perl                     6.34                                                                         ",
+2022-06-16T01:04:24.2091236Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "",
+2022-06-16T01:04:24.2101009Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "Transaction Summary",
+2022-06-16T01:04:24.2117160Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "===================================================================================================================",
+2022-06-16T01:04:24.2124431Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "Install  99 Packages",
+2022-06-16T01:04:24.2127088Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "",
+2022-06-16T01:04:24.2144241Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "Total download size: 68 M",
+2022-06-16T01:04:24.2147531Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "Installed size: 279 M",
+2022-06-16T01:04:24.2156481Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "Downloading Packages:",
+2022-06-16T01:04:24.2163392Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "(1/99): perl-Digest-1.17-395.el8.noarch.rpm     490 kB/s |  27 kB     00:00    ",
+2022-06-16T01:04:24.2171560Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "(2/99): perl-IO-Socket-IP-0.39-5.el8.noarch.rpm 829 kB/s |  47 kB     00:00    ",
+2022-06-16T01:04:24.2185269Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "(3/99): perl-libnet-3.11-3.el8.noarch.rpm       1.9 MB/s | 121 kB     00:00    ",
+2022-06-16T01:04:24.2187684Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "(4/99): apr-util-openssl-1.6.1-6.el8.x86_64.rpm 3.2 MB/s |  27 kB     00:00    ",
+2022-06-16T01:04:24.2213060Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "(5/99): perl-URI-1.73-3.el8.noarch.rpm          6.5 MB/s | 116 kB     00:00    ",
+2022-06-16T01:04:24.2226065Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "(6/99): jbigkit-libs-2.1-14.el8.x86_64.rpm      2.9 MB/s |  55 kB     00:00    ",
+2022-06-16T01:04:24.2239224Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "(7/99): perl-Digest-MD5-2.55-396.el8.x86_64.rpm 4.0 MB/s |  37 kB     00:00    ",
+2022-06-16T01:04:24.2269301Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "(8/99): apr-util-bdb-1.6.1-6.el8.x86_64.rpm     3.4 MB/s |  25 kB     00:00    ",
+2022-06-16T01:04:24.2281902Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "(9/99): nginx-filesystem-1.14.1-9.module+el8.0. 3.0 MB/s |  24 kB     00:00    ",
+2022-06-16T01:04:24.2303313Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "(10/99): apr-util-1.6.1-6.el8.x86_64.rpm        8.3 MB/s | 105 kB     00:00    ",
+2022-06-16T01:04:24.2310396Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "(11/99): perl-DBD-MySQL-4.046-3.module+el8.1.0+  12 MB/s | 156 kB     00:00    ",
+2022-06-16T01:04:24.2337321Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "(12/99): libXpm-3.5.12-8.el8.x86_64.rpm         5.6 MB/s |  58 kB     00:00    ",
+2022-06-16T01:04:24.2340638Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "(13/99): sscg-2.3.3-14.el8.x86_64.rpm           4.7 MB/s |  49 kB     00:00    ",
+2022-06-16T01:04:24.2343845Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "(14/99): libxcb-1.13.1-1.el8.x86_64.rpm          17 MB/s | 229 kB     00:00    ",
+2022-06-16T01:04:24.2370196Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "(15/99): php-pecl-apcu-5.1.18-1.module+el8.3.0+ 5.7 MB/s |  64 kB     00:00    ",
+2022-06-16T01:04:24.2379853Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "(16/99): perl-IO-Socket-SSL-2.066-4.module+el8.  18 MB/s | 298 kB     00:00    ",
+2022-06-16T01:04:24.2387160Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "(17/99): perl-Mozilla-CA-20160104-7.module+el8. 1.8 MB/s |  15 kB     00:00    ",
+2022-06-16T01:04:24.2398354Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "(18/99): libXau-1.0.9-3.el8.x86_64.rpm          4.4 MB/s |  37 kB     00:00    ",
+2022-06-16T01:04:24.2405421Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "(19/99): oniguruma-6.8.2-2.el8.x86_64.rpm        14 MB/s | 187 kB     00:00    ",
+2022-06-16T01:04:24.2415731Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "(20/99): wget-1.19.5-10.el8.x86_64.rpm           30 MB/s | 734 kB     00:00    ",
+2022-06-16T01:04:24.2423710Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "(21/99): gd-2.2.5-7.el8.x86_64.rpm               13 MB/s | 144 kB     00:00    ",
+2022-06-16T01:04:24.2431726Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "(22/99): mariadb-connector-c-config-3.1.11-2.el 1.7 MB/s |  15 kB     00:00    ",
+2022-06-16T01:04:24.2438869Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "(23/99): mariadb-connector-c-3.1.11-2.el8_3.x86  15 MB/s | 200 kB     00:00    ",
+2022-06-16T01:04:24.2447264Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "(24/99): libjpeg-turbo-1.5.3-12.el8.x86_64.rpm   13 MB/s | 157 kB     00:00    ",
+2022-06-16T01:04:24.2453384Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "(25/99): libX11-1.6.8-5.el8.x86_64.rpm           33 MB/s | 611 kB     00:00    ",
+2022-06-16T01:04:24.2462487Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "(26/99): apr-1.6.3-12.el8.x86_64.rpm            9.9 MB/s | 130 kB     00:00    ",
+2022-06-16T01:04:24.2485919Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "(27/99): libX11-common-1.6.8-5.el8.noarch.rpm   9.3 MB/s | 158 kB     00:00    ",
+2022-06-16T01:04:24.2492265Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "(28/99): libwebp-1.0.0-5.el8.x86_64.rpm          23 MB/s | 273 kB     00:00    ",
+2022-06-16T01:04:24.2498754Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "(29/99): httpd-filesystem-2.4.37-47.module+el8. 4.5 MB/s |  41 kB     00:00    ",
+2022-06-16T01:04:24.2509306Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "(30/99): php-common-7.4.19-2.module+el8.6.0+139  27 MB/s | 702 kB     00:00    ",
+2022-06-16T01:04:24.2516157Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "(31/99): mariadb-gssapi-server-10.3.32-2.module 4.4 MB/s |  52 kB     00:00    ",
+2022-06-16T01:04:24.2536262Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "(32/99): mariadb-server-utils-10.3.32-2.module+  37 MB/s | 1.1 MB     00:00    ",
+2022-06-16T01:04:24.2546918Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "(33/99): mariadb-errmsg-10.3.32-2.module+el8.5.  10 MB/s | 234 kB     00:00    ",
+2022-06-16T01:04:24.2554100Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "(34/99): php-json-7.4.19-2.module+el8.6.0+13953 3.6 MB/s |  74 kB     00:00    ",
+2022-06-16T01:04:24.2563679Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "(35/99): mod_ssl-2.4.37-47.module+el8.6.0+14529  12 MB/s | 137 kB     00:00    ",
+2022-06-16T01:04:24.2573470Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "(36/99): mariadb-common-10.3.32-2.module+el8.5. 6.1 MB/s |  64 kB     00:00    ",
+2022-06-16T01:04:24.2580277Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "(37/99): php-7.4.19-2.module+el8.6.0+13953+0a59  23 MB/s | 1.5 MB     00:00    ",
+2022-06-16T01:04:24.2594428Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "(38/99): httpd-tools-2.4.37-47.module+el8.6.0+1 7.9 MB/s | 108 kB     00:00    ",
+2022-06-16T01:04:24.2603712Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "(39/99): mariadb-10.3.32-2.module+el8.5.0+14124  37 MB/s | 6.0 MB     00:00    ",
+2022-06-16T01:04:24.2604634Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "(40/99): perl-Net-SSLeay-1.88-2.module+el8.6.0+ 9.8 MB/s | 379 kB     00:00    ",
+2022-06-16T01:04:24.2612746Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "(41/99): php-gd-7.4.19-2.module+el8.6.0+13953+0 6.2 MB/s |  85 kB     00:00    ",
+2022-06-16T01:04:24.2624005Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "(42/99): perl-DBI-1.641-4.module+el8.6.0+13388+  28 MB/s | 741 kB     00:00    ",
+2022-06-16T01:04:24.2633659Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "(43/99): php-intl-7.4.19-2.module+el8.6.0+13953  11 MB/s | 193 kB     00:00    ",
+2022-06-16T01:04:24.2645185Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "(44/99): httpd-2.4.37-47.module+el8.6.0+14529+0  24 MB/s | 1.4 MB     00:00    ",
+2022-06-16T01:04:24.2661100Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "(45/99): php-mbstring-7.4.19-2.module+el8.6.0+1  16 MB/s | 484 kB     00:00    ",
+2022-06-16T01:04:24.2673045Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "(46/99): php-opcache-7.4.19-2.module+el8.6.0+13  12 MB/s | 267 kB     00:00    ",
+2022-06-16T01:04:24.2687510Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "(47/99): mariadb-server-10.3.32-2.module+el8.5.  38 MB/s |  16 MB     00:00    ",
+2022-06-16T01:04:24.2707309Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "(48/99): mariadb-backup-10.3.32-2.module+el8.5.  24 MB/s | 6.1 MB     00:00    ",
+2022-06-16T01:04:24.2717406Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "(49/99): php-xml-7.4.19-2.module+el8.6.0+13953+ 5.0 MB/s | 174 kB     00:00    ",
+2022-06-16T01:04:24.2723999Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "(50/99): mod_http2-1.15.7-5.module+el8.6.0+1399  14 MB/s | 155 kB     00:00    ",
+2022-06-16T01:04:24.2732891Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "(51/99): php-fpm-7.4.19-2.module+el8.6.0+13953+  12 MB/s | 1.6 MB     00:00    ",
+2022-06-16T01:04:24.2742089Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "(52/99): php-mysqlnd-7.4.19-2.module+el8.6.0+13  10 MB/s | 193 kB     00:00    ",
+2022-06-16T01:04:24.2748825Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "(53/99): php-pdo-7.4.19-2.module+el8.6.0+13953+ 9.6 MB/s | 123 kB     00:00    ",
+2022-06-16T01:04:24.2756244Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "(54/99): libtiff-4.0.9-21.el8.x86_64.rpm         15 MB/s | 188 kB     00:00    ",
+2022-06-16T01:04:24.2762474Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "(55/99): perl-Scalar-List-Utils-1.49-2.el8.x86_ 7.2 MB/s |  68 kB     00:00    ",
+2022-06-16T01:04:24.2771767Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "(56/99): perl-PathTools-3.74-1.el8.x86_64.rpm   9.4 MB/s |  90 kB     00:00    ",
+2022-06-16T01:04:24.2779337Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "(57/99): perl-Data-Dumper-2.167-399.el8.x86_64. 7.1 MB/s |  58 kB     00:00    ",
+2022-06-16T01:04:24.2787773Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "(58/99): perl-threads-shared-1.58-2.el8.x86_64. 5.6 MB/s |  48 kB     00:00    ",
+2022-06-16T01:04:24.2801826Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "(59/99): perl-Unicode-Normalize-1.25-396.el8.x8 8.0 MB/s |  82 kB     00:00    ",
+2022-06-16T01:04:24.2814298Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "(60/99): perl-MIME-Base64-3.15-396.el8.x86_64.r 3.8 MB/s |  31 kB     00:00    ",
+2022-06-16T01:04:24.2821796Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "(61/99): php-cli-7.4.19-2.module+el8.6.0+13953+  41 MB/s | 3.1 MB     00:00    ",
+2022-06-16T01:04:24.2829083Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "(62/99): fontpackages-filesystem-1.44-22.el8.no 1.0 MB/s |  16 kB     00:00    ",
+2022-06-16T01:04:24.2836050Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "(63/99): perl-threads-2.21-2.el8.x86_64.rpm     6.9 MB/s |  61 kB     00:00    ",
+2022-06-16T01:04:24.2848969Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "(64/99): perl-Pod-Simple-3.35-395.el8.noarch.rp  17 MB/s | 213 kB     00:00    ",
+2022-06-16T01:04:24.2862801Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "(65/99): perl-Encode-2.97-3.el8.x86_64.rpm       24 MB/s | 1.5 MB     00:00    ",
+2022-06-16T01:04:24.2865075Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "(66/99): perl-Term-ANSIColor-4.06-396.el8.noarc 2.8 MB/s |  46 kB     00:00    ",
+2022-06-16T01:04:24.2879494Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "(67/99): perl-HTTP-Tiny-0.074-1.el8.noarch.rpm  4.7 MB/s |  58 kB     00:00    ",
+2022-06-16T01:04:24.2891419Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "(68/99): perl-Pod-Escapes-1.07-395.el8.noarch.r 2.3 MB/s |  20 kB     00:00    ",
+2022-06-16T01:04:24.2896261Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "(69/99): perl-Pod-Perldoc-3.28-396.el8.noarch.r 9.5 MB/s |  88 kB     00:00    ",
+2022-06-16T01:04:24.2905523Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "(70/99): perl-File-Path-2.15-2.el8.noarch.rpm   4.0 MB/s |  38 kB     00:00    ",
+2022-06-16T01:04:24.2907910Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "(71/99): perl-parent-0.237-1.el8.noarch.rpm     2.4 MB/s |  20 kB     00:00    ",
+2022-06-16T01:04:24.2920002Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "(72/99): perl-Text-Tabs+Wrap-2013.0523-395.el8. 3.3 MB/s |  24 kB     00:00    ",
+2022-06-16T01:04:24.2927841Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "(73/99): mailcap-2.1.48-3.el8.noarch.rpm        4.3 MB/s |  39 kB     00:00    ",
+2022-06-16T01:04:24.2938749Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "(74/99): perl-Getopt-Long-2.50-4.el8.noarch.rpm 8.6 MB/s |  63 kB     00:00    ",
+2022-06-16T01:04:24.2947188Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "(75/99): perl-podlators-4.11-1.el8.noarch.rpm    13 MB/s | 118 kB     00:00    ",
+2022-06-16T01:04:24.2956771Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "(76/99): perl-Time-Local-1.280-1.el8.noarch.rpm 3.6 MB/s |  34 kB     00:00    ",
+2022-06-16T01:04:24.2962144Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "(77/99): perl-Carp-1.42-396.el8.noarch.rpm      3.1 MB/s |  30 kB     00:00    ",
+2022-06-16T01:04:24.2968241Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "(78/99): perl-Exporter-5.72-396.el8.noarch.rpm  4.4 MB/s |  34 kB     00:00    ",
+2022-06-16T01:04:24.2999201Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "(79/99): perl-Storable-3.11-3.el8.x86_64.rpm     11 MB/s |  98 kB     00:00    ",
+2022-06-16T01:04:24.3002707Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "(80/99): perl-Text-ParseWords-3.30-395.el8.noar 2.3 MB/s |  18 kB     00:00    ",
+2022-06-16T01:04:24.3013914Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "(81/99): perl-File-Temp-0.230.600-1.el8.noarch. 7.9 MB/s |  63 kB     00:00    ",
+2022-06-16T01:04:24.3022120Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "(82/99): perl-constant-1.33-396.el8.noarch.rpm  3.0 MB/s |  25 kB     00:00    ",
+2022-06-16T01:04:24.3028890Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "(83/99): perl-Term-Cap-1.17-395.el8.noarch.rpm  3.0 MB/s |  23 kB     00:00    ",
+2022-06-16T01:04:24.3038405Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "(84/99): perl-Pod-Usage-1.69-395.el8.noarch.rpm 4.3 MB/s |  34 kB     00:00    ",
+2022-06-16T01:04:24.3046020Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "(85/99): perl-Math-BigInt-1.9998.11-7.el8.noarc  17 MB/s | 196 kB     00:00    ",
+2022-06-16T01:04:24.3051973Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "(86/99): libaio-0.3.112-1.el8.x86_64.rpm        3.9 MB/s |  33 kB     00:00    ",
+2022-06-16T01:04:24.3064947Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "(87/99): perl-Socket-2.027-3.el8.x86_64.rpm     7.2 MB/s |  59 kB     00:00    ",
+2022-06-16T01:04:24.3071953Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "(88/99): dejavu-fonts-common-2.35-7.el8.noarch. 9.6 MB/s |  74 kB     00:00    ",
+2022-06-16T01:04:24.3078012Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "(89/99): libxslt-1.1.32-6.el8.x86_64.rpm         20 MB/s | 250 kB     00:00    ",
+2022-06-16T01:04:24.3090980Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "(90/99): redhat-logos-httpd-84.5-1.el8.noarch.r 3.4 MB/s |  29 kB     00:00    ",
+2022-06-16T01:04:24.3095850Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "(91/99): fontconfig-2.13.1-4.el8.x86_64.rpm      16 MB/s | 274 kB     00:00    ",
+2022-06-16T01:04:24.3104322Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "(92/99): dejavu-sans-fonts-2.35-7.el8.noarch.rp  28 MB/s | 1.5 MB     00:00    ",
+2022-06-16T01:04:24.3106440Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "(93/99): perl-IO-1.38-421.el8.x86_64.rpm        9.0 MB/s | 142 kB     00:00    ",
+2022-06-16T01:04:24.3117510Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "(94/99): perl-libs-5.26.3-421.el8.x86_64.rpm     33 MB/s | 1.6 MB     00:00    ",
+2022-06-16T01:04:24.3124643Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "(95/99): perl-Math-Complex-1.59-421.el8.noarch. 8.2 MB/s | 109 kB     00:00    ",
+2022-06-16T01:04:24.3136264Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "(96/99): perl-macros-5.26.3-421.el8.x86_64.rpm  6.8 MB/s |  72 kB     00:00    ",
+2022-06-16T01:04:24.3145855Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "(97/99): perl-Errno-1.28-421.el8.x86_64.rpm     6.9 MB/s |  76 kB     00:00    ",
+2022-06-16T01:04:24.3149232Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "(98/99): libicu-60.3-2.el8_1.x86_64.rpm          41 MB/s | 8.8 MB     00:00    ",
+2022-06-16T01:04:24.3154276Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "(99/99): perl-interpreter-5.26.3-421.el8.x86_64  38 MB/s | 6.3 MB     00:00    ",
+2022-06-16T01:04:24.3169278Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "--------------------------------------------------------------------------------",
+2022-06-16T01:04:24.3172695Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "Total                                            57 MB/s |  68 MB     00:01     ",
+2022-06-16T01:04:24.3183202Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "Running transaction check",
+2022-06-16T01:04:24.3185482Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "Transaction check succeeded.",
+2022-06-16T01:04:24.3189814Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "Running transaction test",
+2022-06-16T01:04:24.3201437Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "Transaction test succeeded.",
+2022-06-16T01:04:24.3215374Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "Running transaction",
+2022-06-16T01:04:24.3218045Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Preparing        :                                                        1/1 ",
+2022-06-16T01:04:24.3239824Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Installing       : php-common-7.4.19-2.module+el8.6.0+13953+0a59ce9f.    1/99 ",
+2022-06-16T01:04:24.3244281Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Running scriptlet: httpd-filesystem-2.4.37-47.module+el8.6.0+14529+08    2/99 ",
+2022-06-16T01:04:24.3251113Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Installing       : httpd-filesystem-2.4.37-47.module+el8.6.0+14529+08    2/99 ",
+2022-06-16T01:04:24.3270657Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Installing       : perl-Digest-1.17-395.el8.noarch                       3/99 ",
+2022-06-16T01:04:24.3276762Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Installing       : perl-Digest-MD5-2.55-396.el8.x86_64                   4/99 ",
+2022-06-16T01:04:24.3291667Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Installing       : perl-Data-Dumper-2.167-399.el8.x86_64                 5/99 ",
+2022-06-16T01:04:24.3298011Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Installing       : perl-libnet-3.11-3.el8.noarch                         6/99 ",
+2022-06-16T01:04:24.3320572Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Installing       : perl-URI-1.73-3.el8.noarch                            7/99 ",
+2022-06-16T01:04:24.3326093Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Installing       : perl-Net-SSLeay-1.88-2.module+el8.6.0+13392+f0897f    8/99 ",
+2022-06-16T01:04:24.3337800Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Installing       : perl-Pod-Escapes-1:1.07-395.el8.noarch                9/99 ",
+2022-06-16T01:04:24.3340692Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Installing       : perl-Mozilla-CA-20160104-7.module+el8.3.0+6498+9ee   10/99 ",
+2022-06-16T01:04:24.3358502Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Installing       : perl-Time-Local-1:1.280-1.el8.noarch                 11/99 ",
+2022-06-16T01:04:24.3363509Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Installing       : perl-IO-Socket-SSL-2.066-4.module+el8.3.0+6446+594   12/99 ",
+2022-06-16T01:04:24.3370211Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Installing       : perl-IO-Socket-IP-0.39-5.el8.noarch                  13/99 ",
+2022-06-16T01:04:24.3394917Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Installing       : perl-Term-ANSIColor-4.06-396.el8.noarch              14/99 ",
+2022-06-16T01:04:24.3400305Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Installing       : perl-File-Temp-0.230.600-1.el8.noarch                15/99 ",
+2022-06-16T01:04:24.3409351Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Installing       : perl-Term-Cap-1.17-395.el8.noarch                    16/99 ",
+2022-06-16T01:04:24.3421923Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Installing       : perl-Pod-Simple-1:3.35-395.el8.noarch                17/99 ",
+2022-06-16T01:04:24.3424269Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Installing       : perl-HTTP-Tiny-0.074-1.el8.noarch                    18/99 ",
+2022-06-16T01:04:24.3455356Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Installing       : perl-podlators-4.11-1.el8.noarch                     19/99 ",
+2022-06-16T01:04:24.3458917Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Installing       : perl-Pod-Perldoc-3.28-396.el8.noarch                 20/99 ",
+2022-06-16T01:04:24.3468156Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Installing       : perl-Text-ParseWords-3.30-395.el8.noarch             21/99 ",
+2022-06-16T01:04:24.3473729Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Installing       : perl-Pod-Usage-4:1.69-395.el8.noarch                 22/99 ",
+2022-06-16T01:04:24.3482936Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Installing       : perl-MIME-Base64-3.15-396.el8.x86_64                 23/99 ",
+2022-06-16T01:04:24.3488537Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Installing       : perl-Storable-1:3.11-3.el8.x86_64                    24/99 ",
+2022-06-16T01:04:24.3502549Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Installing       : perl-Getopt-Long-1:2.50-4.el8.noarch                 25/99 ",
+2022-06-16T01:04:24.3506210Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Installing       : perl-Socket-4:2.027-3.el8.x86_64                     26/99 ",
+2022-06-16T01:04:24.3514138Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Installing       : perl-Errno-1.28-421.el8.x86_64                       27/99 ",
+2022-06-16T01:04:24.3519880Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Installing       : perl-Encode-4:2.97-3.el8.x86_64                      28/99 ",
+2022-06-16T01:04:24.3530452Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Installing       : perl-parent-1:0.237-1.el8.noarch                     29/99 ",
+2022-06-16T01:04:24.3534724Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Installing       : perl-Scalar-List-Utils-3:1.49-2.el8.x86_64           30/99 ",
+2022-06-16T01:04:24.3541406Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Installing       : perl-Carp-1.42-396.el8.noarch                        31/99 ",
+2022-06-16T01:04:24.3549235Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Installing       : perl-Exporter-5.72-396.el8.noarch                    32/99 ",
+2022-06-16T01:04:24.3560161Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Installing       : perl-libs-4:5.26.3-421.el8.x86_64                    33/99 ",
+2022-06-16T01:04:24.3564031Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Installing       : perl-macros-4:5.26.3-421.el8.x86_64                  34/99 ",
+2022-06-16T01:04:24.3573688Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Installing       : perl-Unicode-Normalize-1.25-396.el8.x86_64           35/99 ",
+2022-06-16T01:04:24.3587746Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Installing       : perl-threads-shared-1.58-2.el8.x86_64                36/99 ",
+2022-06-16T01:04:24.3595777Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Installing       : perl-threads-1:2.21-2.el8.x86_64                     37/99 ",
+2022-06-16T01:04:24.3598901Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Installing       : perl-Text-Tabs+Wrap-2013.0523-395.el8.noarch         38/99 ",
+2022-06-16T01:04:24.3606633Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Installing       : perl-File-Path-2.15-2.el8.noarch                     39/99 ",
+2022-06-16T01:04:24.3612705Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Installing       : perl-PathTools-3.74-1.el8.x86_64                     40/99 ",
+2022-06-16T01:04:24.3624433Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Installing       : perl-constant-1.33-396.el8.noarch                    41/99 ",
+2022-06-16T01:04:24.3627523Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Installing       : perl-IO-1.38-421.el8.x86_64                          42/99 ",
+2022-06-16T01:04:24.3634911Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Installing       : perl-interpreter-4:5.26.3-421.el8.x86_64             43/99 ",
+2022-06-16T01:04:24.3641902Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Installing       : apr-1.6.3-12.el8.x86_64                              44/99 ",
+2022-06-16T01:04:24.3652448Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Running scriptlet: apr-1.6.3-12.el8.x86_64                              44/99 ",
+2022-06-16T01:04:24.3655775Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Installing       : apr-util-bdb-1.6.1-6.el8.x86_64                      45/99 ",
+2022-06-16T01:04:24.3665872Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Installing       : apr-util-1.6.1-6.el8.x86_64                          46/99 ",
+2022-06-16T01:04:24.3668067Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Running scriptlet: apr-util-1.6.1-6.el8.x86_64                          46/99 ",
+2022-06-16T01:04:24.3707790Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Installing       : apr-util-openssl-1.6.1-6.el8.x86_64                  47/99 ",
+2022-06-16T01:04:24.3711618Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Installing       : mariadb-connector-c-config-3.1.11-2.el8_3.noarch     48/99 ",
+2022-06-16T01:04:24.3720736Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Installing       : mariadb-common-3:10.3.32-2.module+el8.5.0+14124+14   49/99 ",
+2022-06-16T01:04:24.3726984Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Installing       : php-pdo-7.4.19-2.module+el8.6.0+13953+0a59ce9f.x86   50/99 ",
+2022-06-16T01:04:24.3737737Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Installing       : libaio-0.3.112-1.el8.x86_64                          51/99 ",
+2022-06-16T01:04:24.3743217Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Installing       : fontpackages-filesystem-1.44-22.el8.noarch           52/99 ",
+2022-06-16T01:04:24.3757050Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Installing       : libjpeg-turbo-1.5.3-12.el8.x86_64                    53/99 ",
+2022-06-16T01:04:24.3764986Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Installing       : dejavu-fonts-common-2.35-7.el8.noarch                54/99 ",
+2022-06-16T01:04:24.3772060Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Installing       : dejavu-sans-fonts-2.35-7.el8.noarch                  55/99 ",
+2022-06-16T01:04:24.3780985Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Installing       : fontconfig-2.13.1-4.el8.x86_64                       56/99 ",
+2022-06-16T01:04:24.3788058Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Running scriptlet: fontconfig-2.13.1-4.el8.x86_64                       56/99 ",
+2022-06-16T01:04:24.3795145Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Installing       : mariadb-errmsg-3:10.3.32-2.module+el8.5.0+14124+14   57/99 ",
+2022-06-16T01:04:24.3803247Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Installing       : httpd-tools-2.4.37-47.module+el8.6.0+14529+083145d   58/99 ",
+2022-06-16T01:04:24.3812011Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Installing       : perl-Math-Complex-1.59-421.el8.noarch                59/99 ",
+2022-06-16T01:04:24.3819772Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Installing       : perl-Math-BigInt-1:1.9998.11-7.el8.noarch            60/99 ",
+2022-06-16T01:04:24.3828648Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Installing       : perl-DBI-1.641-4.module+el8.6.0+13388+70c0920f.x86   61/99 ",
+2022-06-16T01:04:24.3838853Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Installing       : mariadb-gssapi-server-3:10.3.32-2.module+el8.5.0+1   62/99 ",
+2022-06-16T01:04:24.3858109Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Installing       : perl-DBD-MySQL-4.046-3.module+el8.1.0+2938+301254e   63/99 ",
+2022-06-16T01:04:24.3866942Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Installing       : mariadb-connector-c-3.1.11-2.el8_3.x86_64            64/99 ",
+2022-06-16T01:04:24.3876165Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Installing       : mariadb-3:10.3.32-2.module+el8.5.0+14124+14ced695.   65/99 ",
+2022-06-16T01:04:24.3885076Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Installing       : mariadb-backup-3:10.3.32-2.module+el8.5.0+14124+14   66/99 ",
+2022-06-16T01:04:24.3890077Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Running scriptlet: mariadb-server-3:10.3.32-2.module+el8.5.0+14124+14   67/99 ",
+2022-06-16T01:04:24.3916896Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Installing       : mariadb-server-3:10.3.32-2.module+el8.5.0+14124+14   67/99 ",
+2022-06-16T01:04:24.3926984Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Running scriptlet: mariadb-server-3:10.3.32-2.module+el8.5.0+14124+14   67/99 ",
+2022-06-16T01:04:24.3937843Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Installing       : mariadb-server-utils-3:10.3.32-2.module+el8.5.0+14   68/99 ",
+2022-06-16T01:04:24.3945261Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Installing       : php-json-7.4.19-2.module+el8.6.0+13953+0a59ce9f.x8   69/99 ",
+2022-06-16T01:04:24.3953825Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Installing       : php-opcache-7.4.19-2.module+el8.6.0+13953+0a59ce9f   70/99 ",
+2022-06-16T01:04:24.3962781Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Installing       : php-cli-7.4.19-2.module+el8.6.0+13953+0a59ce9f.x86   71/99 ",
+2022-06-16T01:04:24.3971314Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Installing       : redhat-logos-httpd-84.5-1.el8.noarch                 72/99 ",
+2022-06-16T01:04:24.3977517Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Installing       : libxslt-1.1.32-6.el8.x86_64                          73/99 ",
+2022-06-16T01:04:24.3983738Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Installing       : php-xml-7.4.19-2.module+el8.6.0+13953+0a59ce9f.x86   74/99 ",
+2022-06-16T01:04:24.4005078Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Installing       : libicu-60.3-2.el8_1.x86_64                           75/99 ",
+2022-06-16T01:04:24.4012982Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Running scriptlet: libicu-60.3-2.el8_1.x86_64                           75/99 ",
+2022-06-16T01:04:24.4021323Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Installing       : mailcap-2.1.48-3.el8.noarch                          76/99 ",
+2022-06-16T01:04:24.4031169Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Installing       : mod_http2-1.15.7-5.module+el8.6.0+13996+01710940.x   77/99 ",
+2022-06-16T01:04:24.4039105Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Installing       : httpd-2.4.37-47.module+el8.6.0+14529+083145da.1.x8   78/99 ",
+2022-06-16T01:04:24.4047716Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Running scriptlet: httpd-2.4.37-47.module+el8.6.0+14529+083145da.1.x8   78/99 ",
+2022-06-16T01:04:24.4063626Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Installing       : libwebp-1.0.0-5.el8.x86_64                           79/99 ",
+2022-06-16T01:04:24.4067203Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Installing       : libX11-common-1.6.8-5.el8.noarch                     80/99 ",
+2022-06-16T01:04:24.4091894Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Installing       : oniguruma-6.8.2-2.el8.x86_64                         81/99 ",
+2022-06-16T01:04:24.4101815Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Running scriptlet: oniguruma-6.8.2-2.el8.x86_64                         81/99 ",
+2022-06-16T01:04:24.4112031Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Installing       : php-mbstring-7.4.19-2.module+el8.6.0+13953+0a59ce9   82/99 ",
+2022-06-16T01:04:24.4123419Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Installing       : libXau-1.0.9-3.el8.x86_64                            83/99 ",
+2022-06-16T01:04:24.4133859Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Installing       : libxcb-1.13.1-1.el8.x86_64                           84/99 ",
+2022-06-16T01:04:24.4143211Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Installing       : libX11-1.6.8-5.el8.x86_64                            85/99 ",
+2022-06-16T01:04:24.4149993Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Installing       : libXpm-3.5.12-8.el8.x86_64                           86/99 ",
+2022-06-16T01:04:24.4154835Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Installing       : sscg-2.3.3-14.el8.x86_64                             87/99 ",
+2022-06-16T01:04:24.4180494Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Running scriptlet: nginx-filesystem-1:1.14.1-9.module+el8.0.0+4108+af   88/99 ",
+2022-06-16T01:04:24.4189691Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Installing       : nginx-filesystem-1:1.14.1-9.module+el8.0.0+4108+af   88/99 ",
+2022-06-16T01:04:24.4198164Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Installing       : php-fpm-7.4.19-2.module+el8.6.0+13953+0a59ce9f.x86   89/99 ",
+2022-06-16T01:04:24.4205336Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Running scriptlet: php-fpm-7.4.19-2.module+el8.6.0+13953+0a59ce9f.x86   89/99 ",
+2022-06-16T01:04:24.4212977Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Installing       : jbigkit-libs-2.1-14.el8.x86_64                       90/99 ",
+2022-06-16T01:04:24.4225707Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Running scriptlet: jbigkit-libs-2.1-14.el8.x86_64                       90/99 ",
+2022-06-16T01:04:24.4233987Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Installing       : libtiff-4.0.9-21.el8.x86_64                          91/99 ",
+2022-06-16T01:04:24.4258014Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Installing       : gd-2.2.5-7.el8.x86_64                                92/99 ",
+2022-06-16T01:04:24.4291351Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Running scriptlet: gd-2.2.5-7.el8.x86_64                                92/99 ",
+2022-06-16T01:04:24.4318603Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Installing       : php-gd-7.4.19-2.module+el8.6.0+13953+0a59ce9f.x86_   93/99 ",
+2022-06-16T01:04:24.4335550Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Installing       : php-7.4.19-2.module+el8.6.0+13953+0a59ce9f.x86_64    94/99 ",
+2022-06-16T01:04:24.4361968Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Installing       : mod_ssl-1:2.4.37-47.module+el8.6.0+14529+083145da.   95/99 ",
+2022-06-16T01:04:24.4384644Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Installing       : php-intl-7.4.19-2.module+el8.6.0+13953+0a59ce9f.x8   96/99 ",
+2022-06-16T01:04:24.4414664Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Installing       : php-mysqlnd-7.4.19-2.module+el8.6.0+13953+0a59ce9f   97/99 ",
+2022-06-16T01:04:24.4462247Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Installing       : php-pecl-apcu-5.1.18-1.module+el8.3.0+6678+b09f589   98/99 ",
+2022-06-16T01:04:24.4497349Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Installing       : wget-1.19.5-10.el8.x86_64                            99/99 ",
+2022-06-16T01:04:24.4544102Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Running scriptlet: wget-1.19.5-10.el8.x86_64                            99/99 ",
+2022-06-16T01:04:24.4772330Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Running scriptlet: httpd-2.4.37-47.module+el8.6.0+14529+083145da.1.x8   99/99 ",
+2022-06-16T01:04:24.4816786Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Running scriptlet: wget-1.19.5-10.el8.x86_64                            99/99 ",
+2022-06-16T01:04:24.4831789Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Running scriptlet: fontconfig-2.13.1-4.el8.x86_64                       99/99 ",
+2022-06-16T01:04:24.4869310Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Running scriptlet: php-fpm-7.4.19-2.module+el8.6.0+13953+0a59ce9f.x86   99/99 ",
+2022-06-16T01:04:24.4878266Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Verifying        : perl-IO-Socket-IP-0.39-5.el8.noarch                   1/99 ",
+2022-06-16T01:04:24.4896318Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Verifying        : perl-libnet-3.11-3.el8.noarch                         2/99 ",
+2022-06-16T01:04:24.4911019Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Verifying        : perl-Digest-1.17-395.el8.noarch                       3/99 ",
+2022-06-16T01:04:24.4933854Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Verifying        : perl-URI-1.73-3.el8.noarch                            4/99 ",
+2022-06-16T01:04:24.4938271Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Verifying        : jbigkit-libs-2.1-14.el8.x86_64                        5/99 ",
+2022-06-16T01:04:24.4953892Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Verifying        : apr-util-openssl-1.6.1-6.el8.x86_64                   6/99 ",
+2022-06-16T01:04:24.4969505Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Verifying        : perl-Digest-MD5-2.55-396.el8.x86_64                   7/99 ",
+2022-06-16T01:04:24.4996720Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Verifying        : apr-util-bdb-1.6.1-6.el8.x86_64                       8/99 ",
+2022-06-16T01:04:24.5001457Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Verifying        : apr-util-1.6.1-6.el8.x86_64                           9/99 ",
+2022-06-16T01:04:24.5014797Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Verifying        : nginx-filesystem-1:1.14.1-9.module+el8.0.0+4108+af   10/99 ",
+2022-06-16T01:04:24.5026263Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Verifying        : perl-DBD-MySQL-4.046-3.module+el8.1.0+2938+301254e   11/99 ",
+2022-06-16T01:04:24.5052900Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Verifying        : libXpm-3.5.12-8.el8.x86_64                           12/99 ",
+2022-06-16T01:04:24.5057492Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Verifying        : sscg-2.3.3-14.el8.x86_64                             13/99 ",
+2022-06-16T01:04:24.5069362Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Verifying        : libxcb-1.13.1-1.el8.x86_64                           14/99 ",
+2022-06-16T01:04:24.5079719Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Verifying        : php-pecl-apcu-5.1.18-1.module+el8.3.0+6678+b09f589   15/99 ",
+2022-06-16T01:04:24.5091667Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Verifying        : perl-IO-Socket-SSL-2.066-4.module+el8.3.0+6446+594   16/99 ",
+2022-06-16T01:04:24.5105569Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Verifying        : perl-Mozilla-CA-20160104-7.module+el8.3.0+6498+9ee   17/99 ",
+2022-06-16T01:04:24.5131238Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Verifying        : wget-1.19.5-10.el8.x86_64                            18/99 ",
+2022-06-16T01:04:24.5135517Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Verifying        : libXau-1.0.9-3.el8.x86_64                            19/99 ",
+2022-06-16T01:04:24.5146528Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Verifying        : oniguruma-6.8.2-2.el8.x86_64                         20/99 ",
+2022-06-16T01:04:24.5162130Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Verifying        : gd-2.2.5-7.el8.x86_64                                21/99 ",
+2022-06-16T01:04:24.5176168Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Verifying        : mariadb-connector-c-config-3.1.11-2.el8_3.noarch     22/99 ",
+2022-06-16T01:04:24.5195564Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Verifying        : mariadb-connector-c-3.1.11-2.el8_3.x86_64            23/99 ",
+2022-06-16T01:04:24.5209546Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Verifying        : libjpeg-turbo-1.5.3-12.el8.x86_64                    24/99 ",
+2022-06-16T01:04:24.5213870Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Verifying        : libX11-1.6.8-5.el8.x86_64                            25/99 ",
+2022-06-16T01:04:24.5226574Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Verifying        : apr-1.6.3-12.el8.x86_64                              26/99 ",
+2022-06-16T01:04:24.5242661Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Verifying        : libX11-common-1.6.8-5.el8.noarch                     27/99 ",
+2022-06-16T01:04:24.5266646Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Verifying        : libwebp-1.0.0-5.el8.x86_64                           28/99 ",
+2022-06-16T01:04:24.5271552Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Verifying        : php-common-7.4.19-2.module+el8.6.0+13953+0a59ce9f.   29/99 ",
+2022-06-16T01:04:24.5281114Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Verifying        : httpd-filesystem-2.4.37-47.module+el8.6.0+14529+08   30/99 ",
+2022-06-16T01:04:24.5285619Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Verifying        : mariadb-server-utils-3:10.3.32-2.module+el8.5.0+14   31/99 ",
+2022-06-16T01:04:24.5296619Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Verifying        : mariadb-gssapi-server-3:10.3.32-2.module+el8.5.0+1   32/99 ",
+2022-06-16T01:04:24.5310290Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Verifying        : mariadb-errmsg-3:10.3.32-2.module+el8.5.0+14124+14   33/99 ",
+2022-06-16T01:04:24.5318890Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Verifying        : mariadb-server-3:10.3.32-2.module+el8.5.0+14124+14   34/99 ",
+2022-06-16T01:04:24.5332864Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Verifying        : mariadb-3:10.3.32-2.module+el8.5.0+14124+14ced695.   35/99 ",
+2022-06-16T01:04:24.5355339Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Verifying        : php-json-7.4.19-2.module+el8.6.0+13953+0a59ce9f.x8   36/99 ",
+2022-06-16T01:04:24.5360128Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Verifying        : mod_ssl-1:2.4.37-47.module+el8.6.0+14529+083145da.   37/99 ",
+2022-06-16T01:04:24.5372577Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Verifying        : mariadb-common-3:10.3.32-2.module+el8.5.0+14124+14   38/99 ",
+2022-06-16T01:04:24.5377906Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Verifying        : php-7.4.19-2.module+el8.6.0+13953+0a59ce9f.x86_64    39/99 ",
+2022-06-16T01:04:24.5387965Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Verifying        : httpd-tools-2.4.37-47.module+el8.6.0+14529+083145d   40/99 ",
+2022-06-16T01:04:24.5401393Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Verifying        : perl-Net-SSLeay-1.88-2.module+el8.6.0+13392+f0897f   41/99 ",
+2022-06-16T01:04:24.5423983Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Verifying        : perl-DBI-1.641-4.module+el8.6.0+13388+70c0920f.x86   42/99 ",
+2022-06-16T01:04:24.5428445Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Verifying        : php-gd-7.4.19-2.module+el8.6.0+13953+0a59ce9f.x86_   43/99 ",
+2022-06-16T01:04:24.5439381Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Verifying        : mariadb-backup-3:10.3.32-2.module+el8.5.0+14124+14   44/99 ",
+2022-06-16T01:04:24.5443823Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Verifying        : php-intl-7.4.19-2.module+el8.6.0+13953+0a59ce9f.x8   45/99 ",
+2022-06-16T01:04:24.5453283Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Verifying        : httpd-2.4.37-47.module+el8.6.0+14529+083145da.1.x8   46/99 ",
+2022-06-16T01:04:24.5469303Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Verifying        : php-mbstring-7.4.19-2.module+el8.6.0+13953+0a59ce9   47/99 ",
+2022-06-16T01:04:24.5480390Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Verifying        : php-opcache-7.4.19-2.module+el8.6.0+13953+0a59ce9f   48/99 ",
+2022-06-16T01:04:24.5485550Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Verifying        : php-fpm-7.4.19-2.module+el8.6.0+13953+0a59ce9f.x86   49/99 ",
+2022-06-16T01:04:24.5496747Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Verifying        : php-xml-7.4.19-2.module+el8.6.0+13953+0a59ce9f.x86   50/99 ",
+2022-06-16T01:04:24.5505259Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Verifying        : mod_http2-1.15.7-5.module+el8.6.0+13996+01710940.x   51/99 ",
+2022-06-16T01:04:24.5513782Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Verifying        : php-mysqlnd-7.4.19-2.module+el8.6.0+13953+0a59ce9f   52/99 ",
+2022-06-16T01:04:24.5527712Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Verifying        : php-cli-7.4.19-2.module+el8.6.0+13953+0a59ce9f.x86   53/99 ",
+2022-06-16T01:04:24.5536964Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Verifying        : php-pdo-7.4.19-2.module+el8.6.0+13953+0a59ce9f.x86   54/99 ",
+2022-06-16T01:04:24.5550714Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Verifying        : libtiff-4.0.9-21.el8.x86_64                          55/99 ",
+2022-06-16T01:04:24.5562734Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Verifying        : perl-Scalar-List-Utils-3:1.49-2.el8.x86_64           56/99 ",
+2022-06-16T01:04:24.5572972Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Verifying        : perl-PathTools-3.74-1.el8.x86_64                     57/99 ",
+2022-06-16T01:04:24.5581807Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Verifying        : perl-Data-Dumper-2.167-399.el8.x86_64                58/99 ",
+2022-06-16T01:04:24.5596227Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Verifying        : perl-threads-shared-1.58-2.el8.x86_64                59/99 ",
+2022-06-16T01:04:24.5605016Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Verifying        : perl-Encode-4:2.97-3.el8.x86_64                      60/99 ",
+2022-06-16T01:04:24.5610357Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Verifying        : perl-Unicode-Normalize-1.25-396.el8.x86_64           61/99 ",
+2022-06-16T01:04:24.5663303Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Verifying        : perl-MIME-Base64-3.15-396.el8.x86_64                 62/99 ",
+2022-06-16T01:04:24.5665841Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Verifying        : fontpackages-filesystem-1.44-22.el8.noarch           63/99 ",
+2022-06-16T01:04:24.5684891Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Verifying        : perl-threads-1:2.21-2.el8.x86_64                     64/99 ",
+2022-06-16T01:04:24.5687383Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Verifying        : perl-Pod-Simple-1:3.35-395.el8.noarch                65/99 ",
+2022-06-16T01:04:24.5693739Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Verifying        : perl-Term-ANSIColor-4.06-396.el8.noarch              66/99 ",
+2022-06-16T01:04:24.5696754Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Verifying        : perl-HTTP-Tiny-0.074-1.el8.noarch                    67/99 ",
+2022-06-16T01:04:24.5703184Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Verifying        : perl-Pod-Escapes-1:1.07-395.el8.noarch               68/99 ",
+2022-06-16T01:04:24.5718814Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Verifying        : perl-Pod-Perldoc-3.28-396.el8.noarch                 69/99 ",
+2022-06-16T01:04:24.5725610Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Verifying        : perl-File-Path-2.15-2.el8.noarch                     70/99 ",
+2022-06-16T01:04:24.5728014Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Verifying        : perl-parent-1:0.237-1.el8.noarch                     71/99 ",
+2022-06-16T01:04:24.5735410Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Verifying        : mailcap-2.1.48-3.el8.noarch                          72/99 ",
+2022-06-16T01:04:24.5741309Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Verifying        : perl-Text-Tabs+Wrap-2013.0523-395.el8.noarch         73/99 ",
+2022-06-16T01:04:24.5751112Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Verifying        : perl-Getopt-Long-1:2.50-4.el8.noarch                 74/99 ",
+2022-06-16T01:04:24.5764816Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Verifying        : perl-podlators-4.11-1.el8.noarch                     75/99 ",
+2022-06-16T01:04:24.5771247Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Verifying        : perl-Time-Local-1:1.280-1.el8.noarch                 76/99 ",
+2022-06-16T01:04:24.5773537Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Verifying        : perl-Carp-1.42-396.el8.noarch                        77/99 ",
+2022-06-16T01:04:24.5780536Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Verifying        : perl-Exporter-5.72-396.el8.noarch                    78/99 ",
+2022-06-16T01:04:24.5799981Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Verifying        : perl-Storable-1:3.11-3.el8.x86_64                    79/99 ",
+2022-06-16T01:04:24.5807293Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Verifying        : perl-Text-ParseWords-3.30-395.el8.noarch             80/99 ",
+2022-06-16T01:04:24.5809732Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Verifying        : perl-File-Temp-0.230.600-1.el8.noarch                81/99 ",
+2022-06-16T01:04:24.5819293Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Verifying        : perl-constant-1.33-396.el8.noarch                    82/99 ",
+2022-06-16T01:04:24.5834758Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Verifying        : perl-Term-Cap-1.17-395.el8.noarch                    83/99 ",
+2022-06-16T01:04:24.5841135Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Verifying        : perl-Pod-Usage-4:1.69-395.el8.noarch                 84/99 ",
+2022-06-16T01:04:24.5843201Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Verifying        : perl-Math-BigInt-1:1.9998.11-7.el8.noarch            85/99 ",
+2022-06-16T01:04:24.5853214Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Verifying        : libaio-0.3.112-1.el8.x86_64                          86/99 ",
+2022-06-16T01:04:24.5868697Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Verifying        : perl-Socket-4:2.027-3.el8.x86_64                     87/99 ",
+2022-06-16T01:04:24.5875666Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Verifying        : libicu-60.3-2.el8_1.x86_64                           88/99 ",
+2022-06-16T01:04:24.5878068Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Verifying        : dejavu-fonts-common-2.35-7.el8.noarch                89/99 ",
+2022-06-16T01:04:24.5885757Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Verifying        : libxslt-1.1.32-6.el8.x86_64                          90/99 ",
+2022-06-16T01:04:24.5891733Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Verifying        : dejavu-sans-fonts-2.35-7.el8.noarch                  91/99 ",
+2022-06-16T01:04:24.5901535Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Verifying        : redhat-logos-httpd-84.5-1.el8.noarch                 92/99 ",
+2022-06-16T01:04:24.5915432Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Verifying        : fontconfig-2.13.1-4.el8.x86_64                       93/99 ",
+2022-06-16T01:04:24.5925119Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Verifying        : perl-libs-4:5.26.3-421.el8.x86_64                    94/99 ",
+2022-06-16T01:04:24.5938629Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Verifying        : perl-IO-1.38-421.el8.x86_64                          95/99 ",
+2022-06-16T01:04:24.5945460Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Verifying        : perl-Math-Complex-1.59-421.el8.noarch                96/99 ",
+2022-06-16T01:04:24.5948399Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Verifying        : perl-interpreter-4:5.26.3-421.el8.x86_64             97/99 ",
+2022-06-16T01:04:24.5958139Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Verifying        : perl-macros-4:5.26.3-421.el8.x86_64                  98/99 ",
+2022-06-16T01:04:24.5972883Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  Verifying        : perl-Errno-1.28-421.el8.x86_64                       99/99 ",
+2022-06-16T01:04:24.5976029Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "Installed products updated.",
+2022-06-16T01:04:24.5978911Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "",
+2022-06-16T01:04:24.5982115Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "Installed:",
+2022-06-16T01:04:24.5987709Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  apr-1.6.3-12.el8.x86_64                                                       ",
+2022-06-16T01:04:24.5999921Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  apr-util-1.6.1-6.el8.x86_64                                                   ",
+2022-06-16T01:04:24.6004137Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  apr-util-bdb-1.6.1-6.el8.x86_64                                               ",
+2022-06-16T01:04:24.6023019Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  apr-util-openssl-1.6.1-6.el8.x86_64                                           ",
+2022-06-16T01:04:24.6027170Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  dejavu-fonts-common-2.35-7.el8.noarch                                         ",
+2022-06-16T01:04:24.6032256Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  dejavu-sans-fonts-2.35-7.el8.noarch                                           ",
+2022-06-16T01:04:24.6045383Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  fontconfig-2.13.1-4.el8.x86_64                                                ",
+2022-06-16T01:04:24.6050413Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  fontpackages-filesystem-1.44-22.el8.noarch                                    ",
+2022-06-16T01:04:24.6072083Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  gd-2.2.5-7.el8.x86_64                                                         ",
+2022-06-16T01:04:24.6091999Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  httpd-2.4.37-47.module+el8.6.0+14529+083145da.1.x86_64                        ",
+2022-06-16T01:04:24.6096471Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  httpd-filesystem-2.4.37-47.module+el8.6.0+14529+083145da.1.noarch             ",
+2022-06-16T01:04:24.6101888Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  httpd-tools-2.4.37-47.module+el8.6.0+14529+083145da.1.x86_64                  ",
+2022-06-16T01:04:24.6106267Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  jbigkit-libs-2.1-14.el8.x86_64                                                ",
+2022-06-16T01:04:24.6112956Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  libX11-1.6.8-5.el8.x86_64                                                     ",
+2022-06-16T01:04:24.6125870Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  libX11-common-1.6.8-5.el8.noarch                                              ",
+2022-06-16T01:04:24.6131344Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  libXau-1.0.9-3.el8.x86_64                                                     ",
+2022-06-16T01:04:24.6150276Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  libXpm-3.5.12-8.el8.x86_64                                                    ",
+2022-06-16T01:04:24.6154479Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  libaio-0.3.112-1.el8.x86_64                                                   ",
+2022-06-16T01:04:24.6171468Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  libicu-60.3-2.el8_1.x86_64                                                    ",
+2022-06-16T01:04:24.6178047Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  libjpeg-turbo-1.5.3-12.el8.x86_64                                             ",
+2022-06-16T01:04:24.6183696Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  libtiff-4.0.9-21.el8.x86_64                                                   ",
+2022-06-16T01:04:24.6192705Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  libwebp-1.0.0-5.el8.x86_64                                                    ",
+2022-06-16T01:04:24.6205672Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  libxcb-1.13.1-1.el8.x86_64                                                    ",
+2022-06-16T01:04:24.6211795Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  libxslt-1.1.32-6.el8.x86_64                                                   ",
+2022-06-16T01:04:24.6231017Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  mailcap-2.1.48-3.el8.noarch                                                   ",
+2022-06-16T01:04:24.6238627Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  mariadb-3:10.3.32-2.module+el8.5.0+14124+14ced695.x86_64                      ",
+2022-06-16T01:04:24.6245065Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  mariadb-backup-3:10.3.32-2.module+el8.5.0+14124+14ced695.x86_64               ",
+2022-06-16T01:04:24.6263780Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  mariadb-common-3:10.3.32-2.module+el8.5.0+14124+14ced695.x86_64               ",
+2022-06-16T01:04:24.6272475Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  mariadb-connector-c-3.1.11-2.el8_3.x86_64                                     ",
+2022-06-16T01:04:24.6287154Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  mariadb-connector-c-config-3.1.11-2.el8_3.noarch                              ",
+2022-06-16T01:04:24.6310183Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  mariadb-errmsg-3:10.3.32-2.module+el8.5.0+14124+14ced695.x86_64               ",
+2022-06-16T01:04:24.6320711Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  mariadb-gssapi-server-3:10.3.32-2.module+el8.5.0+14124+14ced695.x86_64        ",
+2022-06-16T01:04:24.6330305Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  mariadb-server-3:10.3.32-2.module+el8.5.0+14124+14ced695.x86_64               ",
+2022-06-16T01:04:24.6346477Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  mariadb-server-utils-3:10.3.32-2.module+el8.5.0+14124+14ced695.x86_64         ",
+2022-06-16T01:04:24.6366200Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  mod_http2-1.15.7-5.module+el8.6.0+13996+01710940.x86_64                       ",
+2022-06-16T01:04:24.6376348Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  mod_ssl-1:2.4.37-47.module+el8.6.0+14529+083145da.1.x86_64                    ",
+2022-06-16T01:04:24.6383017Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  nginx-filesystem-1:1.14.1-9.module+el8.0.0+4108+af250afe.noarch               ",
+2022-06-16T01:04:24.6396228Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  oniguruma-6.8.2-2.el8.x86_64                                                  ",
+2022-06-16T01:04:24.6414732Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  perl-Carp-1.42-396.el8.noarch                                                 ",
+2022-06-16T01:04:24.6425695Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  perl-DBD-MySQL-4.046-3.module+el8.1.0+2938+301254e2.x86_64                    ",
+2022-06-16T01:04:24.6434566Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  perl-DBI-1.641-4.module+el8.6.0+13388+70c0920f.x86_64                         ",
+2022-06-16T01:04:24.6467341Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  perl-Data-Dumper-2.167-399.el8.x86_64                                         ",
+2022-06-16T01:04:24.6477356Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  perl-Digest-1.17-395.el8.noarch                                               ",
+2022-06-16T01:04:24.6513468Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  perl-Digest-MD5-2.55-396.el8.x86_64                                           ",
+2022-06-16T01:04:24.6545662Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  perl-Encode-4:2.97-3.el8.x86_64                                               ",
+2022-06-16T01:04:24.6553650Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  perl-Errno-1.28-421.el8.x86_64                                                ",
+2022-06-16T01:04:24.6567024Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  perl-Exporter-5.72-396.el8.noarch                                             ",
+2022-06-16T01:04:24.6589203Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  perl-File-Path-2.15-2.el8.noarch                                              ",
+2022-06-16T01:04:24.6596849Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  perl-File-Temp-0.230.600-1.el8.noarch                                         ",
+2022-06-16T01:04:24.6606608Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  perl-Getopt-Long-1:2.50-4.el8.noarch                                          ",
+2022-06-16T01:04:24.6627343Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  perl-HTTP-Tiny-0.074-1.el8.noarch                                             ",
+2022-06-16T01:04:24.6648120Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  perl-IO-1.38-421.el8.x86_64                                                   ",
+2022-06-16T01:04:24.6654637Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  perl-IO-Socket-IP-0.39-5.el8.noarch                                           ",
+2022-06-16T01:04:24.6666491Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  perl-IO-Socket-SSL-2.066-4.module+el8.3.0+6446+594cad75.noarch                ",
+2022-06-16T01:04:24.6676873Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  perl-MIME-Base64-3.15-396.el8.x86_64                                          ",
+2022-06-16T01:04:24.6696734Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  perl-Math-BigInt-1:1.9998.11-7.el8.noarch                                     ",
+2022-06-16T01:04:24.6707975Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  perl-Math-Complex-1.59-421.el8.noarch                                         ",
+2022-06-16T01:04:24.6730222Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  perl-Mozilla-CA-20160104-7.module+el8.3.0+6498+9eecfe51.noarch                ",
+2022-06-16T01:04:24.6740948Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  perl-Net-SSLeay-1.88-2.module+el8.6.0+13392+f0897f98.x86_64                   ",
+2022-06-16T01:04:24.6764616Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  perl-PathTools-3.74-1.el8.x86_64                                              ",
+2022-06-16T01:04:24.6775349Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  perl-Pod-Escapes-1:1.07-395.el8.noarch                                        ",
+2022-06-16T01:04:24.6788601Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  perl-Pod-Perldoc-3.28-396.el8.noarch                                          ",
+2022-06-16T01:04:24.6810016Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  perl-Pod-Simple-1:3.35-395.el8.noarch                                         ",
+2022-06-16T01:04:24.6829222Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  perl-Pod-Usage-4:1.69-395.el8.noarch                                          ",
+2022-06-16T01:04:24.6836270Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  perl-Scalar-List-Utils-3:1.49-2.el8.x86_64                                    ",
+2022-06-16T01:04:24.6858132Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  perl-Socket-4:2.027-3.el8.x86_64                                              ",
+2022-06-16T01:04:24.6878241Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  perl-Storable-1:3.11-3.el8.x86_64                                             ",
+2022-06-16T01:04:24.6890407Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  perl-Term-ANSIColor-4.06-396.el8.noarch                                       ",
+2022-06-16T01:04:24.6909901Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  perl-Term-Cap-1.17-395.el8.noarch                                             ",
+2022-06-16T01:04:24.6922666Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  perl-Text-ParseWords-3.30-395.el8.noarch                                      ",
+2022-06-16T01:04:24.6934507Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  perl-Text-Tabs+Wrap-2013.0523-395.el8.noarch                                  ",
+2022-06-16T01:04:24.6948379Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  perl-Time-Local-1:1.280-1.el8.noarch                                          ",
+2022-06-16T01:04:24.6970555Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  perl-URI-1.73-3.el8.noarch                                                    ",
+2022-06-16T01:04:24.6978754Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  perl-Unicode-Normalize-1.25-396.el8.x86_64                                    ",
+2022-06-16T01:04:24.6992053Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  perl-constant-1.33-396.el8.noarch                                             ",
+2022-06-16T01:04:24.7015567Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  perl-interpreter-4:5.26.3-421.el8.x86_64                                      ",
+2022-06-16T01:04:24.7025186Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  perl-libnet-3.11-3.el8.noarch                                                 ",
+2022-06-16T01:04:24.7047360Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  perl-libs-4:5.26.3-421.el8.x86_64                                             ",
+2022-06-16T01:04:24.7056235Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  perl-macros-4:5.26.3-421.el8.x86_64                                           ",
+2022-06-16T01:04:24.7062992Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  perl-parent-1:0.237-1.el8.noarch                                              ",
+2022-06-16T01:04:24.7082611Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  perl-podlators-4.11-1.el8.noarch                                              ",
+2022-06-16T01:04:24.7091418Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  perl-threads-1:2.21-2.el8.x86_64                                              ",
+2022-06-16T01:04:24.7116894Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  perl-threads-shared-1.58-2.el8.x86_64                                         ",
+2022-06-16T01:04:24.7125574Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  php-7.4.19-2.module+el8.6.0+13953+0a59ce9f.x86_64                             ",
+2022-06-16T01:04:24.7138832Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  php-cli-7.4.19-2.module+el8.6.0+13953+0a59ce9f.x86_64                         ",
+2022-06-16T01:04:24.7164067Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  php-common-7.4.19-2.module+el8.6.0+13953+0a59ce9f.x86_64                      ",
+2022-06-16T01:04:24.7173599Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  php-fpm-7.4.19-2.module+el8.6.0+13953+0a59ce9f.x86_64                         ",
+2022-06-16T01:04:24.7186001Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  php-gd-7.4.19-2.module+el8.6.0+13953+0a59ce9f.x86_64                          ",
+2022-06-16T01:04:24.7200802Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  php-intl-7.4.19-2.module+el8.6.0+13953+0a59ce9f.x86_64                        ",
+2022-06-16T01:04:24.7220621Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  php-json-7.4.19-2.module+el8.6.0+13953+0a59ce9f.x86_64                        ",
+2022-06-16T01:04:24.7228474Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  php-mbstring-7.4.19-2.module+el8.6.0+13953+0a59ce9f.x86_64                    ",
+2022-06-16T01:04:24.7236360Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  php-mysqlnd-7.4.19-2.module+el8.6.0+13953+0a59ce9f.x86_64                     ",
+2022-06-16T01:04:24.7255118Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  php-opcache-7.4.19-2.module+el8.6.0+13953+0a59ce9f.x86_64                     ",
+2022-06-16T01:04:24.7266956Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  php-pdo-7.4.19-2.module+el8.6.0+13953+0a59ce9f.x86_64                         ",
+2022-06-16T01:04:24.7288868Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  php-pecl-apcu-5.1.18-1.module+el8.3.0+6678+b09f589e.x86_64                    ",
+2022-06-16T01:04:24.7296635Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  php-xml-7.4.19-2.module+el8.6.0+13953+0a59ce9f.x86_64                         ",
+2022-06-16T01:04:24.7304036Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  redhat-logos-httpd-84.5-1.el8.noarch                                          ",
+2022-06-16T01:04:24.7323075Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  sscg-2.3.3-14.el8.x86_64                                                      ",
+2022-06-16T01:04:24.7332336Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "  wget-1.19.5-10.el8.x86_64                                                     ",
+2022-06-16T01:04:24.7341095Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "",
+2022-06-16T01:04:24.7347631Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "Complete!"
+2022-06-16T01:04:24.7363951Z [0m[1mnull_resource.example1 (local-exec):[0m [0m    ]
+2022-06-16T01:04:24.7370025Z [0m[1mnull_resource.example1 (local-exec):[0m [0m}
+2022-06-16T01:04:24.7377996Z 
+2022-06-16T01:04:24.7381997Z [0m[1mnull_resource.example1 (local-exec):[0m [0mTASK [Start mariadb service] ***************************************************
+2022-06-16T01:04:30.3749028Z [0m[1mnull_resource.example1 (local-exec):[0m [0mchanged: [ec2-35-171-26-240.compute-1.amazonaws.com]
+2022-06-16T01:04:30.3815721Z 
+2022-06-16T01:04:30.3816869Z [0m[1mnull_resource.example1 (local-exec):[0m [0mTASK [Create user, grant privilage in DB] **************************************
+2022-06-16T01:04:30.8026705Z [0m[1mnull_resource.example1 (local-exec):[0m [0mchanged: [ec2-35-171-26-240.compute-1.amazonaws.com]
+2022-06-16T01:04:30.8064646Z 
+2022-06-16T01:04:30.8065395Z [0m[1mnull_resource.example1 (local-exec):[0m [0mTASK [debug] *******************************************************************
+2022-06-16T01:04:30.8430442Z [0m[1mnull_resource.example1 (local-exec):[0m [0mok: [ec2-35-171-26-240.compute-1.amazonaws.com] => {
+2022-06-16T01:04:30.8431323Z [0m[1mnull_resource.example1 (local-exec):[0m [0m    "db.stdout_lines": [
+2022-06-16T01:04:30.8431904Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "Database",
+2022-06-16T01:04:30.8432507Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "information_schema",
+2022-06-16T01:04:30.8433077Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "mysql",
+2022-06-16T01:04:30.8433638Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "performance_schema",
+2022-06-16T01:04:30.8434226Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "wikidatabase"
+2022-06-16T01:04:30.8434783Z [0m[1mnull_resource.example1 (local-exec):[0m [0m    ]
+2022-06-16T01:04:30.8435290Z [0m[1mnull_resource.example1 (local-exec):[0m [0m}
+2022-06-16T01:04:30.8463046Z 
+2022-06-16T01:04:30.8463655Z [0m[1mnull_resource.example1 (local-exec):[0m [0mTASK [Download mediawiki] ******************************************************
+2022-06-16T01:04:33.6209119Z [0m[1mnull_resource.example1: Still creating... [1m20s elapsed][0m[0m
+2022-06-16T01:04:34.0466406Z [0m[1mnull_resource.example1 (local-exec):[0m [0mchanged: [ec2-35-171-26-240.compute-1.amazonaws.com]
+2022-06-16T01:04:34.0488731Z 
+2022-06-16T01:04:34.0489569Z [0m[1mnull_resource.example1 (local-exec):[0m [0mTASK [create code directory] ***************************************************
+2022-06-16T01:04:34.5826395Z [0m[1mnull_resource.example1 (local-exec):[0m [0mchanged: [ec2-35-171-26-240.compute-1.amazonaws.com]
+2022-06-16T01:04:34.5886479Z 
+2022-06-16T01:04:34.5887395Z [0m[1mnull_resource.example1 (local-exec):[0m [0mTASK [untar the mediawiki] *****************************************************
+2022-06-16T01:04:43.6214376Z [0m[1mnull_resource.example1: Still creating... [1m30s elapsed][0m[0m
+2022-06-16T01:04:53.6223046Z [0m[1mnull_resource.example1: Still creating... [1m40s elapsed][0m[0m
+2022-06-16T01:04:58.4492572Z [0m[1mnull_resource.example1 (local-exec):[0m [0mchanged: [ec2-35-171-26-240.compute-1.amazonaws.com]
+2022-06-16T01:04:58.4538480Z 
+2022-06-16T01:04:58.4539354Z [0m[1mnull_resource.example1 (local-exec):[0m [0mTASK [Create symbolic link] ****************************************************
+2022-06-16T01:04:59.1186284Z [0m[1mnull_resource.example1 (local-exec):[0m [0mchanged: [ec2-35-171-26-240.compute-1.amazonaws.com]
+2022-06-16T01:04:59.1224511Z 
+2022-06-16T01:04:59.1225273Z [0m[1mnull_resource.example1 (local-exec):[0m [0mTASK [Change ownership] ********************************************************
+2022-06-16T01:04:59.5077944Z [0m[1mnull_resource.example1 (local-exec):[0m [0m[WARNING]: Consider using the file module with owner rather than running
+2022-06-16T01:04:59.5079213Z [0m[1mnull_resource.example1 (local-exec):[0m [0m'chown'.  If you need to use command because file is insufficient you can add
+2022-06-16T01:04:59.5161467Z [0m[1mnull_resource.example1 (local-exec):[0m [0m'warn: false' to this command task or set 'command_warnings=False' in
+2022-06-16T01:04:59.5162211Z [0m[1mnull_resource.example1 (local-exec):[0m [0mansible.cfg to get rid of this message.
+2022-06-16T01:04:59.5162864Z [0m[1mnull_resource.example1 (local-exec):[0m [0mchanged: [ec2-35-171-26-240.compute-1.amazonaws.com]
+2022-06-16T01:04:59.5163199Z 
+2022-06-16T01:04:59.5163576Z [0m[1mnull_resource.example1 (local-exec):[0m [0mTASK [debug] *******************************************************************
+2022-06-16T01:04:59.5509377Z [0m[1mnull_resource.example1 (local-exec):[0m [0mok: [ec2-35-171-26-240.compute-1.amazonaws.com] => {
+2022-06-16T01:04:59.5510888Z [0m[1mnull_resource.example1 (local-exec):[0m [0m    "chown.stdout_lines": [
+2022-06-16T01:04:59.5511809Z [0m[1mnull_resource.example1 (local-exec):[0m [0m        "changed ownership of '/var/www/mediawiki' from root:root to apache:apache"
+2022-06-16T01:04:59.5512568Z [0m[1mnull_resource.example1 (local-exec):[0m [0m    ]
+2022-06-16T01:04:59.5513066Z [0m[1mnull_resource.example1 (local-exec):[0m [0m}
+2022-06-16T01:04:59.5562038Z 
+2022-06-16T01:04:59.5562916Z [0m[1mnull_resource.example1 (local-exec):[0m [0mTASK [post-install configuration] **********************************************
+2022-06-16T01:05:00.0906573Z [0m[1mnull_resource.example1 (local-exec):[0m [0mchanged: [ec2-35-171-26-240.compute-1.amazonaws.com]
+2022-06-16T01:05:00.0946938Z 
+2022-06-16T01:05:00.0948086Z [0m[1mnull_resource.example1 (local-exec):[0m [0mTASK [selinux policy over the directory] ***************************************
+2022-06-16T01:05:01.1471939Z [0m[1mnull_resource.example1 (local-exec):[0m [0mchanged: [ec2-35-171-26-240.compute-1.amazonaws.com]
+2022-06-16T01:05:01.1475429Z 
+2022-06-16T01:05:01.1476029Z [0m[1mnull_resource.example1 (local-exec):[0m [0mTASK [restart httd service] ****************************************************
+2022-06-16T01:05:03.6233007Z [0m[1mnull_resource.example1: Still creating... [1m50s elapsed][0m[0m
+2022-06-16T01:05:03.6271224Z [0m[1mnull_resource.example1 (local-exec):[0m [0m[WARNING]: Consider using the service module rather than running 'service'.  If
+2022-06-16T01:05:03.6272348Z [0m[1mnull_resource.example1 (local-exec):[0m [0myou need to use command because service is insufficient you can add 'warn:
+2022-06-16T01:05:03.6273162Z [0m[1mnull_resource.example1 (local-exec):[0m [0mfalse' to this command task or set 'command_warnings=False' in ansible.cfg to
+2022-06-16T01:05:03.6273942Z [0m[1mnull_resource.example1 (local-exec):[0m [0mget rid of this message.
+2022-06-16T01:05:03.6274634Z [0m[1mnull_resource.example1 (local-exec):[0m [0mchanged: [ec2-35-171-26-240.compute-1.amazonaws.com]
+2022-06-16T01:05:03.6361634Z 
+2022-06-16T01:05:03.6362488Z [0m[1mnull_resource.example1 (local-exec):[0m [0mPLAY RECAP *********************************************************************
+2022-06-16T01:05:03.6363618Z [0m[1mnull_resource.example1 (local-exec):[0m [0mec2-35-171-26-240.compute-1.amazonaws.com : ok=14   changed=11   unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
+2022-06-16T01:05:03.6364127Z 
+2022-06-16T01:05:03.7095730Z [0m[1mnull_resource.example1: Creation complete after 1m50s [id=6870374012450109045][0m
+2022-06-16T01:05:03.7166533Z [0m[1m[32m
+2022-06-16T01:05:03.7167299Z Apply complete! Resources: 3 added, 0 changed, 0 destroyed.
+2022-06-16T01:05:03.7173230Z [0m[0m[1m[32m
+2022-06-16T01:05:03.7173782Z Outputs:
+2022-06-16T01:05:03.7174067Z 
+2022-06-16T01:05:03.7181805Z [0mmediawiki_server_id = "i-020b8743b479169e2"
+2022-06-16T01:05:03.7182759Z mediawiki_server_public_dns = "ec2-35-171-26-240.compute-1.amazonaws.com"
+2022-06-16T01:05:03.7184359Z mediawiki_server_state = "running"
+2022-06-16T01:05:03.7254614Z subnet_id = "subnet-02125c8c3aa17229a"
+2022-06-16T01:05:03.7255005Z vpc_id = "vpc-0d2f1384a7024abd3"

@@ -1,0 +1,16 @@
+2022-06-16T00:57:51.6608699Z ##[group]Run actions/checkout@v1
+2022-06-16T00:57:51.6609121Z with:
+2022-06-16T00:57:51.6609393Z   clean: true
+2022-06-16T00:57:51.6609692Z ##[endgroup]
+2022-06-16T00:57:52.5929298Z Syncing repository: shiva01745/mediawiki
+2022-06-16T00:57:52.5929777Z ##[command]git version
+2022-06-16T00:57:52.5930090Z git version 2.34.1
+2022-06-16T00:57:52.5930456Z ##[command]git config --get remote.origin.url
+2022-06-16T00:57:52.5930810Z ##[command]git clean -ffdx
+2022-06-16T00:57:52.5931146Z ##[command]git reset --hard HEAD
+2022-06-16T00:57:52.5931495Z HEAD is now at 337d829 Update main.yml
+2022-06-16T00:57:52.5931956Z ##[command]git config gc.auto 0
+2022-06-16T00:57:52.5932423Z ##[command]git config --get-all http.https://github.com/shiva01745/mediawiki.extraheader
+2022-06-16T00:57:52.5962095Z ##[command]git -c http.extraheader="AUTHORIZATION: basic ***" fetch --tags --prune --progress --no-recurse-submodules origin +refs/heads/*:refs/remotes/origin/*
+2022-06-16T00:57:52.5962852Z ##[command]git checkout --progress --force 337d829c1e2b35d0a542edc862a2a7270ba5bc0f
+2022-06-16T00:57:52.5963422Z HEAD is now at 337d829 Update main.yml

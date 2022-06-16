@@ -1,0 +1,32 @@
+2022-06-16T00:57:52.6239582Z ##[group]Run sudo mkdir -p /opt/custom_workspace/project_mediawiki || true
+2022-06-16T00:57:52.6240338Z [36;1msudo mkdir -p /opt/custom_workspace/project_mediawiki || true[0m
+2022-06-16T00:57:52.6240810Z [36;1msudo chown -R ubuntu:ubuntu /opt/custom_workspace/[0m
+2022-06-16T00:57:52.6241284Z [36;1m mkdir /opt/custom_workspace/project_mediawiki/terraform || true[0m
+2022-06-16T00:57:52.6241870Z [36;1mcp -rf key /opt/custom_workspace/project_mediawiki/[0m
+2022-06-16T00:57:52.6242335Z [36;1mchmod 400 /opt/custom_workspace/project_mediawiki/key/ubuntu_key.pem[0m
+2022-06-16T00:57:52.6242817Z [36;1mcp -rf ansible_playbook /opt/custom_workspace/project_mediawiki/[0m
+2022-06-16T00:57:52.6243330Z [36;1mcp -f terraform/*.tf /opt/custom_workspace/project_mediawiki/terraform[0m
+2022-06-16T00:57:52.6243799Z [36;1mls -lthra /opt/custom_workspace/project_mediawiki/*[0m
+2022-06-16T00:57:52.6272791Z shell: /usr/bin/bash -e {0}
+2022-06-16T00:57:52.6273137Z ##[endgroup]
+2022-06-16T00:57:52.7233342Z mkdir: cannot create directory ‘/opt/custom_workspace/project_mediawiki/terraform’: File exists
+2022-06-16T00:57:52.7351734Z /opt/custom_workspace/project_mediawiki/ansible_playbook:
+2022-06-16T00:57:52.7395505Z total 12K
+2022-06-16T00:57:52.7396055Z drwxr-xr-x 5 ubuntu ubuntu 4.0K Jun 16 00:54 ..
+2022-06-16T00:57:52.7396628Z drwxrwxr-x 2 ubuntu ubuntu 4.0K Jun 16 00:54 .
+2022-06-16T00:57:52.7397109Z -rw-rw-r-- 1 ubuntu ubuntu 2.0K Jun 16 00:57 mediawiki_playbook.yml
+2022-06-16T00:57:52.7397365Z 
+2022-06-16T00:57:52.7397540Z /opt/custom_workspace/project_mediawiki/terraform:
+2022-06-16T00:57:52.7397854Z total 24K
+2022-06-16T00:57:52.7398539Z drwxr-xr-x 5 ubuntu ubuntu 4.0K Jun 16 00:54 ..
+2022-06-16T00:57:52.7398991Z drwxr-xr-x 3 ubuntu ubuntu 4.0K Jun 16 00:54 .terraform
+2022-06-16T00:57:52.7399703Z -rw-r--r-- 1 ubuntu ubuntu 2.2K Jun 16 00:55 .terraform.lock.hcl
+2022-06-16T00:57:52.7400256Z drwxrwxr-x 3 ubuntu ubuntu 4.0K Jun 16 00:55 .
+2022-06-16T00:57:52.7400728Z -rw-rw-r-- 1 ubuntu ubuntu  525 Jun 16 00:57 outputs.tf
+2022-06-16T00:57:52.7401206Z -rw-rw-r-- 1 ubuntu ubuntu 2.4K Jun 16 00:57 mediawiki.tf
+2022-06-16T00:57:52.7401446Z 
+2022-06-16T00:57:52.7401756Z /opt/custom_workspace/project_mediawiki/key:
+2022-06-16T00:57:52.7402062Z total 12K
+2022-06-16T00:57:52.7402409Z drwxr-xr-x 5 ubuntu ubuntu 4.0K Jun 16 00:54 ..
+2022-06-16T00:57:52.7402859Z -r-------- 1 ubuntu ubuntu 1.7K Jun 16 00:57 ubuntu_key.pem
+2022-06-16T00:57:52.7403288Z drwxrwxr-x 2 ubuntu ubuntu 4.0K Jun 16 00:57 .

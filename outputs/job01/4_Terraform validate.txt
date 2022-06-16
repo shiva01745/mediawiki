@@ -1,0 +1,26 @@
+2022-06-16T00:57:52.7442532Z ##[group]Run cd /opt/custom_workspace/project_mediawiki/terraform
+2022-06-16T00:57:52.7443132Z [36;1mcd /opt/custom_workspace/project_mediawiki/terraform[0m
+2022-06-16T00:57:52.7443525Z [36;1mterraform init[0m
+2022-06-16T00:57:52.7443830Z [36;1mterraform validate[0m
+2022-06-16T00:57:52.7470123Z shell: /usr/bin/bash -e {0}
+2022-06-16T00:57:52.7470438Z ##[endgroup]
+2022-06-16T00:57:53.5046988Z 
+2022-06-16T00:57:53.5051998Z [0m[1mInitializing the backend...[0m
+2022-06-16T00:57:56.6614277Z 
+2022-06-16T00:57:56.6619178Z [0m[1mInitializing provider plugins...[0m
+2022-06-16T00:57:56.6637062Z - Reusing previous version of hashicorp/aws from the dependency lock file
+2022-06-16T00:57:56.7741132Z - Reusing previous version of hashicorp/null from the dependency lock file
+2022-06-16T00:57:58.9069332Z - Using previously-installed hashicorp/aws v3.74.3
+2022-06-16T00:57:58.9592469Z - Using previously-installed hashicorp/null v3.1.1
+2022-06-16T00:57:58.9596785Z 
+2022-06-16T00:57:58.9601249Z [0m[1m[32mTerraform has been successfully initialized![0m[32m[0m
+2022-06-16T00:57:58.9605617Z [0m[32m
+2022-06-16T00:57:58.9606363Z You may now begin working with Terraform. Try running "terraform plan" to see
+2022-06-16T00:57:58.9607222Z any changes that are required for your infrastructure. All Terraform commands
+2022-06-16T00:57:58.9607831Z should now work.
+2022-06-16T00:57:58.9663965Z 
+2022-06-16T00:57:58.9664372Z If you ever set or change modules or backend configuration for Terraform,
+2022-06-16T00:57:58.9664898Z rerun this command to reinitialize your working directory. If you forget, other
+2022-06-16T00:57:58.9665522Z commands will detect it and remind you to do so if necessary.[0m
+2022-06-16T00:58:01.6330988Z [32m[1mSuccess![0m The configuration is valid.
+2022-06-16T00:58:01.6331721Z [0m

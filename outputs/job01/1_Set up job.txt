@@ -1,0 +1,24 @@
+2022-06-16T00:57:50.8634926Z Current runner version: '2.293.0'
+2022-06-16T00:57:50.8642704Z Runner name: 'ip-172-31-94-103'
+2022-06-16T00:57:50.8643307Z Runner group name: 'Default'
+2022-06-16T00:57:50.8643998Z Machine name: 'ip-172-31-94-103'
+2022-06-16T00:57:50.8646640Z ##[group]GITHUB_TOKEN Permissions
+2022-06-16T00:57:50.8647323Z Actions: write
+2022-06-16T00:57:50.8647691Z Checks: write
+2022-06-16T00:57:50.8647994Z Contents: write
+2022-06-16T00:57:50.8648445Z Deployments: write
+2022-06-16T00:57:50.8648885Z Discussions: write
+2022-06-16T00:57:50.8649195Z Issues: write
+2022-06-16T00:57:50.8649538Z Metadata: read
+2022-06-16T00:57:50.8649935Z Packages: write
+2022-06-16T00:57:50.8650262Z Pages: write
+2022-06-16T00:57:50.8650624Z PullRequests: write
+2022-06-16T00:57:50.8651018Z RepositoryProjects: write
+2022-06-16T00:57:50.8651368Z SecurityEvents: write
+2022-06-16T00:57:50.8651789Z Statuses: write
+2022-06-16T00:57:50.8652160Z ##[endgroup]
+2022-06-16T00:57:50.8656215Z Secret source: Actions
+2022-06-16T00:57:50.8656832Z Prepare workflow directory
+2022-06-16T00:57:50.9744925Z Prepare all required actions
+2022-06-16T00:57:50.9970613Z Getting action download info
+2022-06-16T00:57:51.1917363Z Download action repository 'actions/checkout@v1' (SHA:50fbc622fc4ef5163becd7fab6573eac35f8462e)
