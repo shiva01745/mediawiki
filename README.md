@@ -1,23 +1,23 @@
 Created two jobs for this task
 
-1. Job-01: Provision the Mediawiki server
+## Job-01: Provision the Mediawiki server
 - 	Using GitHub action for this job
 - 	Self-hosted Runner server is created
 - 	It’s a Parameterized job and can perform terraform apply or destroy based on the choice
 
-2. GitHub runner server-side configuration:
+## GitHub runner server-side configuration:
 - 	Using awscli, aws creds are configured
 - 	Terraform and ansible packages are installed  
 
 
-3. Terraform role: 
+## Terraform role: 
 - 	Using existing VPC and Subnet resource and Provision the security group
 - .	Provision EC2 instance with newly created SG
 - 	Terraform install python3 package on newly created EC2 instance
 - .	Terraform trigger the ansible playbook
   
 
-4. Ansible role: 
+## Ansible role: 
 - .	Install required packages
 - .	Starts the mariadb service
 - 	Creates the Database, username and grant privileges
@@ -33,11 +33,11 @@ Created two jobs for this task
    
 
 
-1. Job-02: Deploy New tar.zip code on the mediawiki server
+## Job-02: Deploy New tar.zip code on the mediawiki server
 - 	Using github actions for CICD
 - .	Provide the new mediawiki url in the build parameter option
 
-2. Ansible:
+## Ansible:
 - 	Ansible will picked the newly downloaded tar.zip file
 - 	Remove the old code directory
 - 	Create new code directory
