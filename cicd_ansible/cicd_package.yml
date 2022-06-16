@@ -6,30 +6,28 @@
   gather_facts: no
   #
   tasks:
-  - name: Download mediawiki tar file
+  - name: Download mediawiki tar file from url
     get_url:
        url: "{{ version }}"
        dest: /tmp
 
-  - name: Remove directory
+  - name: Remove the code directory incase previous code might exist
     file:
        path: /opt/code
        state: absent
 
-  - name: create code directory
+  - name: Create new code directory
     file:
       dest: /opt/code
       state: directory
 
-  - name: Find download mediawiki package
+  - name: Find downloaded mediawiki package
     find: 
       paths: /tmp 
       patterns: "mediawiki-*.tar.gz"
     register: find_result
 
-
-
-  - name: untar the mediawiki code
+  - name: Untar the downloaded mediawiki code
     unarchive:
        src: "{{ item.path }}"
        dest: /opt/code
@@ -41,18 +39,18 @@
       path: "/var/www/mediawiki"
       state: absent
 
-  - name: Create symbolic link 
+  - name: Create new code symbolic link 
     shell: |
        cd /var/www/
        ln -s /opt/code/mediawiki-*/ mediawiki
 
-  - name: Change ownership
+  - name: Change ownership of the new code
     shell: chown -v -R apache:apache /var/www/mediawiki
     register: chown
   - debug:
       var: chown.stdout_lines
 
-  - name: restart httpd service
+  - name: Restart httpd service
     shell: service httpd restart
 
 
